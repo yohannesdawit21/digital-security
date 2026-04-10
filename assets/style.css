@@ -1,0 +1,158 @@
+:root {
+    --bg: #f4f7fb;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #475569;
+    --brand: #0b57d0;
+    --brand-2: #0a3b8f;
+    --line: #dbe3ef;
+    --ok: #0f9d58;
+    --warn: #d97706;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--ink);
+    background: radial-gradient(circle at top right, #d8e8ff 0, var(--bg) 45%);
+    line-height: 1.5;
+}
+
+header {
+    background: linear-gradient(120deg, var(--brand-2), var(--brand));
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.35rem;
+}
+
+header p {
+    margin: 6px 0 0;
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+nav {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-size: 0.85rem;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+main {
+    max-width: 1100px;
+    margin: 18px auto;
+    padding: 0 16px 24px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 16px;
+}
+
+.card h2,
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.card p,
+.card li {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.section-title {
+    margin: 10px 0 14px;
+    font-size: 1.4rem;
+}
+
+.link-list {
+    padding-left: 18px;
+    margin: 8px 0 0;
+}
+
+.link-list a {
+    color: var(--brand);
+}
+
+.tool-card {
+    display: grid;
+    grid-template-columns: 84px 1fr;
+    gap: 12px;
+    align-items: center;
+}
+
+.tool-card img {
+    width: 84px;
+    height: 84px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: #fff;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    border-radius: 999px;
+    padding: 4px 9px;
+    margin-bottom: 8px;
+}
+
+.tag.warn {
+    color: #8a4b00;
+    background: #fff4df;
+}
+
+.tag.ok {
+    color: #0b6a3a;
+    background: #e6f7ef;
+}
+
+footer {
+    max-width: 1100px;
+    margin: 0 auto 20px;
+    padding: 0 16px;
+    color: var(--muted);
+    font-size: 0.86rem;
+}
+
+@media (max-width: 700px) {
+    .tool-card {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-card img {
+        width: 72px;
+        height: 72px;
+    }
+}
