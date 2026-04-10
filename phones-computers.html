@@ -5,11 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Phones and Computers</title>
     <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .slide {
+            margin-bottom: 14px;
+        }
+
+        .meta {
+            font-size: 0.86rem;
+            color: #5b6b84;
+            margin: 4px 0 12px;
+        }
+
+        .toc-title {
+            margin-bottom: 4px;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .presenter-note {
+            border-left: 4px solid #0b57d0;
+            background: #eef5ff;
+            padding: 10px 12px;
+            border-radius: 10px;
+            color: #234066;
+            font-size: 0.92rem;
+            margin-top: 10px;
+        }
+
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .quick-links a {
+            text-decoration: none;
+            color: #0b57d0;
+            border: 1px solid #c7dafc;
+            background: #f6faff;
+            border-radius: 999px;
+            padding: 6px 11px;
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Your Phones and Computers</h1>
-        <p>Keep each platform updated and protected against malware.</p>
+        <p>Presentation-ready guide to protect devices from malware and unauthorized access.</p>
         <nav>
             <a href="index.html">Home</a>
             <a href="assess-plan.html">Assess and Plan</a>
@@ -21,36 +65,184 @@
     </header>
 
     <main>
-        <div class="grid">
-            <section class="card">
-                <h3>Protect against malware</h3>
-                <p>Update OS/apps, avoid unknown downloads, and use trusted security tools.</p>
-            </section>
-            <section class="card">
-                <h3>Protect your Android device</h3>
-                <p>Install from trusted sources, keep Play Protect enabled, and lock the phone with PIN/biometrics.</p>
-            </section>
-            <section class="card">
-                <h3>Protect your iOS device</h3>
-                <p>Use latest iOS, strong device passcode, and review app permissions regularly.</p>
-            </section>
-            <section class="card">
-                <h3>Protect your Windows computer</h3>
-                <p>Enable Defender, firewall, updates, and device encryption where available.</p>
-            </section>
-            <section class="card">
-                <h3>Protect your Mac computer</h3>
-                <p>Enable FileVault, keep macOS updated, and install apps from trusted sources only.</p>
-            </section>
-            <section class="card">
-                <h3>Protect your Linux computer</h3>
-                <p>Use official repos, keep system packages patched, and enable full-disk encryption.</p>
-            </section>
-        </div>
+        <h2 class="section-title">Phones & Computers Overview</h2>
+        <section class="card slide">
+            <h3>How to use this page in a presentation</h3>
+            <p>Use each section as a slide script. Start from general malware hygiene, then go platform by platform.</p>
+            <div class="quick-links">
+                <a href="#malware">Protect against malware</a>
+                <a href="#android">Android</a>
+                <a href="#ios">iOS</a>
+                <a href="#windows">Windows</a>
+                <a href="#mac">Mac</a>
+                <a href="#tools">Related Tools</a>
+            </div>
+        </section>
 
-        <section class="card" style="margin-top:14px;">
-            <span class="tag ok">Related Tools</span>
-            <p>Visit Security in a Box tools for anti-malware, secure updates, and platform-specific recommendations.</p>
+        <section class="card slide" id="malware">
+            <h3>Protect against malware</h3>
+            <p class="meta">Updated 9 April 2024</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>Update all software</li>
+                <li>Be aware that malicious actors may try to pressure you to act quickly or appeal to your emotions</li>
+                <li>Pause before you click and be cautious when you receive a link</li>
+                <li>Use caution when opening attachments</li>
+                <li>Make file extensions on your computer visible to avoid being tricked by malware</li>
+                <li>Avoid suspicious pop-up windows</li>
+                <li>Use antivirus or anti-malware</li>
+                <li>Use good hygiene with USB cables and devices</li>
+                <li>Use good hygiene with sensitive information</li>
+                <li>Secure other smart devices</li>
+                <li>Reboot your device often, and switch it off overnight</li>
+                <li>If you suspect your device has been infected...</li>
+                <li>Advanced strategies</li>
+                <li>Avoid unlicensed software and consider free and open-source alternatives</li>
+            </ul>
+            <div class="presenter-note">Presenter note: emphasize behavior-based protection first. Most infections start with rushed clicks, untrusted files, or unsafe software sources.</div>
+        </section>
+
+        <section class="card slide" id="android">
+            <h3>Protect your Android device</h3>
+            <p class="meta">Updated 17 September 2025</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>Use the latest version of your device's operating system (OS)</li>
+                <li>Regularly update all installed apps</li>
+                <li>Use apps from trusted sources</li>
+                <li>Remove apps that you do not need and do not use</li>
+                <li>If possible, avoid using social media apps</li>
+                <li>Use privacy-friendly apps</li>
+                <li>Check your app permissions</li>
+                <li>Turn off location and wipe history</li>
+                <li>Create separate user accounts on your devices</li>
+                <li>Remove unneeded users associated with your device</li>
+                <li>Secure the Google accounts connected with your device</li>
+                <li>Set your screen to sleep and lock</li>
+                <li>Control what can be seen when your device is locked</li>
+                <li>Disable voice controls</li>
+                <li>Use a physical privacy filter that prevents others from seeing your screen</li>
+                <li>Use a camera cover</li>
+                <li>Turn off connectivity you are not using</li>
+                <li>Clear your saved wifi networks</li>
+                <li>Turn off sharing you are not using</li>
+                <li>Make sure your keyboard respects your privacy</li>
+                <li>Advanced: figure out whether someone has accessed your device without your permission (basic forensics)</li>
+                <li>Advanced: Use Android without a Google account</li>
+                <li>Advanced: Change the operating system of your Android device</li>
+                <li>See also</li>
+            </ul>
+            <div class="presenter-note">Presenter note: permissions and account security are critical. Even updated phones are risky if app permissions and connected accounts are not controlled.</div>
+        </section>
+
+        <section class="card slide" id="ios">
+            <h3>Protect your iOS device</h3>
+            <p class="meta">Updated 24 September 2025</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>Use the latest version of your device's operating system (OS)</li>
+                <li>Turn Lockdown Mode on</li>
+                <li>Use apps from trusted sources</li>
+                <li>Remove apps that you do not need and do not use</li>
+                <li>Use privacy-friendly apps</li>
+                <li>If possible, avoid using social media apps</li>
+                <li>Check your app permissions</li>
+                <li>Turn off location and wipe history</li>
+                <li>Secure the accounts connected with your device</li>
+                <li>Remove permissions to access your device, accounts or information</li>
+                <li>Set your screen to sleep and lock</li>
+                <li>Control what can be seen when your device is locked</li>
+                <li>Disable voice controls</li>
+                <li>Use a physical privacy filter that prevents others from seeing your screen</li>
+                <li>Use a camera cover</li>
+                <li>Turn off connectivity you are not using</li>
+                <li>Clear your saved wifi networks</li>
+                <li>Turn off sharing you are not using</li>
+                <li>Make sure you are using the default iOS keyboard</li>
+                <li>Advanced: figure out whether someone has accessed your device without your permission (basic forensics)</li>
+                <li>More resources</li>
+            </ul>
+            <div class="presenter-note">Presenter note: Lockdown Mode is important for high-risk users. For general users, updates, account hardening, and permissions are the biggest wins.</div>
+        </section>
+
+        <section class="card slide" id="windows">
+            <h3>Protect your Windows computer</h3>
+            <p class="meta">Updated 30 September 2024</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>Use the latest version of your device's operating system (OS)</li>
+                <li>Regularly update all installed apps</li>
+                <li>Use programs and apps from trusted sources</li>
+                <li>Remove apps that you do not need and do not use</li>
+                <li>Use privacy-friendly apps</li>
+                <li>Check your app permissions</li>
+                <li>Turn off location and wipe history</li>
+                <li>Create separate user accounts on your devices</li>
+                <li>Remove unneeded accounts associated with your device</li>
+                <li>Secure the accounts connected to your device</li>
+                <li>Protect your user account and computer with a strong passphrase</li>
+                <li>Set your screen to sleep and lock</li>
+                <li>Control what can be seen when your device is locked</li>
+                <li>Make sure voice controls are not enabled</li>
+                <li>Use a physical privacy filter that prevents others from seeing your screen</li>
+                <li>Use a camera cover</li>
+                <li>Turn off connectivity you are not using</li>
+                <li>Clear your saved wifi networks</li>
+                <li>Turn off sharing you are not using</li>
+                <li>Turn off Autoplay</li>
+                <li>Turn off advertising and other privacy options</li>
+                <li>Protect your device with Windows Security</li>
+                <li>Use a firewall</li>
+                <li>Advanced: Stop malicious code from running</li>
+                <li>Advanced: figure out whether someone has accessed your device without your permission (basic forensics)</li>
+            </ul>
+            <div class="presenter-note">Presenter note: for Windows, combine update policy + Microsoft Defender + firewall + reduced app permissions for strongest baseline protection.</div>
+        </section>
+
+        <section class="card slide" id="mac">
+            <h3>Protect your Mac computer</h3>
+            <p class="meta">Updated 25 June 2024</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>Use the latest version of your device's operating system (OS)</li>
+                <li>Turn Lockdown Mode on</li>
+                <li>Use apps from trusted sources</li>
+                <li>Remove apps that you do not need and do not use</li>
+                <li>Use privacy-friendly apps</li>
+                <li>Check your app permissions</li>
+                <li>Turn off location and wipe history</li>
+                <li>Create separate user accounts on your devices</li>
+                <li>Remove unneeded accounts associated with your device</li>
+                <li>Secure the accounts connected with your device</li>
+                <li>Protect your user account and computer with a strong passphrase</li>
+                <li>Set your screen to sleep and lock</li>
+                <li>Control what can be seen when your device is locked</li>
+                <li>Disable voice controls</li>
+                <li>Use a physical privacy filter that prevents others from seeing your screen</li>
+                <li>Use a camera cover</li>
+                <li>Turn off connectivity you are not using</li>
+                <li>Clear your saved wifi networks</li>
+                <li>Turn off sharing you are not using</li>
+                <li>Use a firewall</li>
+                <li>Additional protection recommendations</li>
+                <li>Advanced: figure out whether someone has accessed your device without your permission (basic forensics)</li>
+            </ul>
+            <div class="presenter-note">Presenter note: include Gatekeeper, FileVault, and firewall in your live demo checklist for Mac hardening.</div>
+        </section>
+
+        <section class="card slide" id="tools">
+            <h3>Related Tools - Phones & Computers</h3>
+            <p class="meta">Updated 26 June 2024</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>Scan your devices to detect malicious software</li>
+                <li>Protect your devices from infection</li>
+                <li>Firefox add-ons that help protect your device against malicious software</li>
+            </ul>
+            <span class="tag ok">Related Guide</span>
+            <ul class="link-list">
+                <li><a href="https://securityinabox.org/en/phones-and-computers/tools/" target="_blank" rel="noopener">Phones & Computers Tools</a></li>
+            </ul>
         </section>
     </main>
 

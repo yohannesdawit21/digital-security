@@ -5,11 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Files</title>
     <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .slide {
+            margin-bottom: 14px;
+        }
+
+        .meta {
+            font-size: 0.86rem;
+            color: #5b6b84;
+            margin: 4px 0 12px;
+        }
+
+        .toc-title {
+            margin-bottom: 4px;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .presenter-note {
+            border-left: 4px solid #0b57d0;
+            background: #eef5ff;
+            padding: 10px 12px;
+            border-radius: 10px;
+            color: #234066;
+            font-size: 0.92rem;
+            margin-top: 10px;
+        }
+
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .quick-links a {
+            text-decoration: none;
+            color: #0b57d0;
+            border: 1px solid #c7dafc;
+            background: #f6faff;
+            border-radius: 999px;
+            padding: 6px 11px;
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Your Files</h1>
-        <p>Protect, back up, and securely erase sensitive data.</p>
+        <p>Presentation-ready guide for file encryption, backups, destruction, and metadata privacy.</p>
         <nav>
             <a href="index.html">Home</a>
             <a href="assess-plan.html">Assess and Plan</a>
@@ -21,28 +65,95 @@
     </header>
 
     <main>
-        <div class="grid">
-            <section class="card">
-                <h3>Protect sensitive information</h3>
-                <p>Encrypt files at rest and use secure sharing links with expiration and access control.</p>
-            </section>
-            <section class="card">
-                <h3>Back up and recover</h3>
-                <p>Use the 3-2-1 backup rule: 3 copies, 2 media types, 1 offline/offsite copy.</p>
-            </section>
-            <section class="card">
-                <h3>Destroy sensitive information</h3>
-                <p>Delete is not enough. Use secure wipe tools or full-disk encryption plus key destruction.</p>
-            </section>
-            <section class="card">
-                <h3>Destroy identifying metadata</h3>
-                <p>Remove EXIF and document metadata before publishing or sharing files.</p>
-            </section>
-        </div>
+        <h2 class="section-title">Your Files Overview</h2>
+        <section class="card slide">
+            <h3>How to use this page in a presentation</h3>
+            <p>Use each section as a slide outline. First explain file protection, then backups, then safe deletion, then metadata removal.</p>
+            <div class="quick-links">
+                <a href="#sensitive">Sensitive Information</a>
+                <a href="#backup">Back up and Recover</a>
+                <a href="#destroy">Destroy Sensitive Information</a>
+                <a href="#metadata">Destroy Identifying Information</a>
+                <a href="#tools">Related Tools</a>
+            </div>
+        </section>
 
-        <section class="card" style="margin-top:14px;">
-            <span class="tag ok">Related Tools</span>
-            <p>Use metadata cleaners, encrypted backup tools, and secure deletion tools to protect file privacy.</p>
+        <section class="card slide" id="sensitive">
+            <h3>Protect your sensitive information</h3>
+            <p class="meta">Updated 13 March 2024</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>Consider deleting old data instead of storing it</li>
+                <li>Consider whether encryption is illegal or suspicious in your jurisdiction</li>
+                <li>If encryption is illegal in your country, consider the following alternatives</li>
+                <li>Consider encrypting your whole device</li>
+                <li>Consider encrypting your external storage devices</li>
+                <li>Consider encrypting just some sensitive files</li>
+                <li>Protect your encrypted folder or volume</li>
+                <li>Use trusted dealers and repair shops</li>
+            </ul>
+            <div class="presenter-note">Presenter note: start with the simple message that sensitive data should not be stored longer than needed, and encryption should match your legal and operational risk.</div>
+        </section>
+
+        <section class="card slide" id="backup">
+            <h3>Back up and recover from information loss</h3>
+            <p class="meta">Updated 14 March 2024</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>Recover deleted or lost information</li>
+                <li>Create a backup plan</li>
+                <li>Back up the files in your computer to a local device</li>
+                <li>Back up your phone to a local device</li>
+                <li>Consider whether or not you should back up to cloud services</li>
+                <li>Back up your email</li>
+                <li>Scan and back up printed documents</li>
+                <li>Set a backup schedule</li>
+                <li>Practice recovery</li>
+                <li>Establish procedures for coworkers</li>
+                <li>Other considerations</li>
+            </ul>
+            <div class="presenter-note">Presenter note: stress that backups are only useful if recovery is tested. A backup that has never been restored is only a theory.</div>
+        </section>
+
+        <section class="card slide" id="destroy">
+            <h3>Destroy sensitive information</h3>
+            <p class="meta">Updated 25 March 2024</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>Clean traces of your work off your device</li>
+                <li>Wipe a whole device</li>
+                <li>Before you sell, give away or dispose of an old computer or phone</li>
+            </ul>
+            <div class="presenter-note">Presenter note: explain the difference between deleting a file and securely destroying data. Deletion alone often leaves recoverable traces.</div>
+        </section>
+
+        <section class="card slide" id="metadata">
+            <h3>Destroy identifying information</h3>
+            <p class="meta">Updated 20 March 2024</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>Take identifying information out of your photos and other files</li>
+                <li>Remove identifying details from pictures</li>
+                <li>Remove identifying details from videos</li>
+                <li>Disable geolocation in your device</li>
+                <li>Remove metadata from pictures, videos and other files</li>
+            </ul>
+            <div class="presenter-note">Presenter note: metadata is often overlooked, but it can reveal where, when, and how a file was created or shared.</div>
+        </section>
+
+        <section class="card slide" id="tools">
+            <h3>Related Tools - Files</h3>
+            <p class="meta">Updated 25 March 2024</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>Protect and encrypt your files</li>
+                <li>Photos and videos</li>
+                <li>Remove metadata from pictures, videos and other files</li>
+                <li>Destroy sensitive files</li>
+                <li>Recover your files</li>
+            </ul>
+            <span class="tag ok">Related Guides</span>
+            <p>Use encrypted storage, backup tools, metadata cleaners, and secure delete tools to protect and recover your files.</p>
         </section>
     </main>
 

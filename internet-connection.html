@@ -5,11 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Internet Connection</title>
     <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .slide {
+            margin-bottom: 14px;
+        }
+
+        .meta {
+            font-size: 0.86rem;
+            color: #5b6b84;
+            margin: 4px 0 12px;
+        }
+
+        .toc-title {
+            margin-bottom: 4px;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .presenter-note {
+            border-left: 4px solid #0b57d0;
+            background: #eef5ff;
+            padding: 10px 12px;
+            border-radius: 10px;
+            color: #234066;
+            font-size: 0.92rem;
+            margin-top: 10px;
+        }
+
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .quick-links a {
+            text-decoration: none;
+            color: #0b57d0;
+            border: 1px solid #c7dafc;
+            background: #f6faff;
+            border-radius: 999px;
+            padding: 6px 11px;
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Your Internet Connection</h1>
-        <p>Understand monitoring risks and browse more privately.</p>
+        <p>Presentation-ready guide for censorship, secure browsing, VPNs, and anonymity.</p>
         <nav>
             <a href="index.html">Home</a>
             <a href="assess-plan.html">Assess and Plan</a>
@@ -21,28 +65,117 @@
     </header>
 
     <main>
-        <div class="grid">
-            <section class="card">
-                <h3>How internet censorship works</h3>
-                <p>Traffic can be blocked by DNS filtering, IP blocking, deep packet inspection, or platform-level restrictions.</p>
-            </section>
-            <section class="card">
-                <h3>Browse more securely</h3>
-                <p>Use HTTPS-only mode, secure DNS when available, and block risky scripts/trackers.</p>
-            </section>
-            <section class="card">
-                <h3>Circumvent blockages and monitoring</h3>
-                <p>Use reputable VPNs, bridge relays, or trusted circumvention tools when legal and safe.</p>
-            </section>
-            <section class="card">
-                <h3>Anonymize connections</h3>
-                <p>For stronger anonymity needs, use Tor Browser and reduce identifying account logins.</p>
-            </section>
-        </div>
+        <h2 class="section-title">Internet Connection Overview</h2>
+        <section class="card slide">
+            <h3>How to use this page in a presentation</h3>
+            <p>Use each section like a slide: explain how the internet is monitored or blocked, then show the safer browsing, circumvention, and anonymity options.</p>
+            <div class="quick-links">
+                <a href="#works">How it works</a>
+                <a href="#browse">Browse securely</a>
+                <a href="#circumvent">Circumvent blocks</a>
+                <a href="#anonymize">Anonymize</a>
+                <a href="#tools">Related Tools</a>
+            </div>
+        </section>
 
-        <section class="card" style="margin-top:14px;">
-            <span class="tag ok">Related Tools</span>
-            <p>Security in a Box provides VPN, Tor, and browser hardening guidance for safer internet use.</p>
+        <section class="card slide" id="works">
+            <h3>How the internet works and how it can be censored</h3>
+            <p class="meta">Updated 20 August 2024</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>How the internet works, and how some countries and other entities block or censor websites and online services</li>
+                <li>Understanding how websites and online services can be blocked</li>
+                <li>Your internet connection</li>
+                <li>How websites are blocked</li>
+                <li>How tools get around blocks</li>
+                <li>Further Reading</li>
+            </ul>
+            <div class="presenter-note">Presenter note: use a simple network diagram to show the path from device to website, then point out where blocking can happen.</div>
+        </section>
+
+        <section class="card slide" id="browse">
+            <h3>Browse the web more securely</h3>
+            <p class="meta">Updated 12 September 2024</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>Choose a web browser... or two!</li>
+                <li>Change your device's default browser</li>
+                <li>Make sure your browser is up to date</li>
+                <li>Enter web addresses in the address bar</li>
+                <li>Set your default search engine</li>
+                <li>Review the camera, microphone and other site permissions</li>
+                <li>Secure your connections</li>
+                <li>Enable Tracking Protection settings</li>
+                <li>Turn off the browser's built-in password manager</li>
+                <li>Use protective browser add-ons/extensions</li>
+                <li>Remove unwanted add-ons/extensions and manage pop-ups</li>
+                <li>Delete your browsing history</li>
+                <li>Use private browsing or Incognito mode</li>
+                <li>Consider not showing what you last viewed on startup or your most visited sites</li>
+                <li>[Advanced] How to recognize and report a malicious website</li>
+            </ul>
+            <div class="presenter-note">Presenter note: show the audience that browser settings matter as much as the browser itself. Small changes can reduce tracking and malicious redirects.</div>
+        </section>
+
+        <section class="card slide" id="circumvent">
+            <h3>Circumvent internet blockages and monitoring</h3>
+            <p class="meta">Updated 1 October 2025</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>Check if the website or service you can't reach is really blocked</li>
+                <li>Encrypt your connections and your DNS</li>
+                <li>Consider whether you really need a VPN service</li>
+                <li>Consider what a VPN service can do for you</li>
+                <li>Learn how to choose a VPN service</li>
+                <li>Choose a VPN service</li>
+                <li>Check if it works</li>
+                <li>Consider alternatives to regular VPN services</li>
+                <li>Try Tor</li>
+                <li>Consider accessing and sharing content on decentralized networks</li>
+                <li>Install software that isn't accessible in your country</li>
+                <li>Ask these questions about other tools to visit blocked websites</li>
+                <li>Advanced: Partner with OONI</li>
+                <li>Further Reading</li>
+            </ul>
+            <div class="presenter-note">Presenter note: explain that VPNs, Tor, DNS encryption, and decentralized networks solve different problems. One tool is not always the answer.</div>
+        </section>
+
+        <section class="card slide" id="anonymize">
+            <h3>Anonymize your connections and communications</h3>
+            <p class="meta">Updated 17 September 2024</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>Consider whether you really need anonymity tools</li>
+                <li>Get ready</li>
+                <li>Browse the web anonymously</li>
+                <li>Use Tor securely by avoiding common mistakes</li>
+                <li>Anonymize all your connections</li>
+                <li>Chat anonymously</li>
+                <li>Exchange anonymous emails</li>
+                <li>Send and receive files anonymously</li>
+                <li>Use Tor Bridges if you can't connect to Tor automatically</li>
+                <li>[Advanced] Set up a whistleblowing platform to receive files anonymously</li>
+            </ul>
+            <div class="presenter-note">Presenter note: make the distinction between privacy and anonymity. Privacy reduces data exposure; anonymity hides identity more strongly.</div>
+        </section>
+
+        <section class="card slide" id="tools">
+            <h3>Related Tools - Internet Connection</h3>
+            <p class="meta">Updated 19 September 2024</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>Browse the web more securely</li>
+                <li>Visit blocked websites</li>
+                <li>Anonymize your connections</li>
+                <li>Access and share content on decentralized networks</li>
+            </ul>
+            <span class="tag ok">Related Guides</span>
+            <ul class="link-list">
+                <li><a href="https://securityinabox.org/en/internet-connection/browse-securely/" target="_blank" rel="noopener">Browse the web more securely</a></li>
+                <li><a href="https://securityinabox.org/en/internet-connection/circumvent-blocks/" target="_blank" rel="noopener">Visit blocked websites</a></li>
+                <li><a href="https://securityinabox.org/en/internet-connection/anonymize-connections/" target="_blank" rel="noopener">Anonymize your connections</a></li>
+                <li><a href="https://securityinabox.org/en/internet-connection/decentralized-networks/" target="_blank" rel="noopener">Access and share content on decentralized networks</a></li>
+            </ul>
         </section>
     </main>
 
