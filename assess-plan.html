@@ -3,15 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assess and Plan</title>
+    <title>Assess & Plan</title>
     <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .slide {
+            margin-bottom: 14px;
+        }
+
+        .meta {
+            font-size: 0.86rem;
+            color: #5b6b84;
+            margin: 4px 0 12px;
+        }
+
+        .toc-title {
+            margin-bottom: 4px;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .presenter-note {
+            border-left: 4px solid #0b57d0;
+            background: #eef5ff;
+            padding: 10px 12px;
+            border-radius: 10px;
+            color: #234066;
+            font-size: 0.92rem;
+            margin-top: 10px;
+        }
+
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .quick-links a {
+            text-decoration: none;
+            color: #0b57d0;
+            border: 1px solid #c7dafc;
+            background: #f6faff;
+            border-radius: 999px;
+            padding: 6px 11px;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 820px) {
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Assess and Plan</h1>
-        <p>Start by understanding risks, then build a realistic safety plan.</p>
+        <h1>Assess & Plan</h1>
+        <p>Presentation-ready guide: understand risk first, then build practical protection steps.</p>
         <nav>
-            <a href="digital security.html">Home</a>
+            <a href="index.html">Home</a>
             <a href="passwords.html">Your Passwords</a>
             <a href="communication.html">Your Communication</a>
             <a href="phones-computers.html">Your Phones and Computers</a>
@@ -22,26 +78,156 @@
 
     <main>
         <h2 class="section-title">Core Concepts</h2>
-        <div class="grid">
-            <section class="card">
-                <h3>Protect against physical threats</h3>
-                <p>Think about device theft, office break-ins, shoulder surfing, and lost phones. Use screen locks, privacy filters, and safe storage.</p>
-            </section>
-            <section class="card">
-                <h3>Create and protect multiple online identities</h3>
-                <p>Separate personal, work, and public identities. Use different emails, usernames, and recovery methods to reduce damage if one identity is exposed.</p>
-            </section>
-            <section class="card">
-                <h3>Protect the privacy of your online communications</h3>
-                <p>Prefer end-to-end encrypted tools, verify contacts, and avoid sharing sensitive details in plain text channels.</p>
-            </section>
-            <section class="card">
-                <h3>Protect devices while traveling</h3>
-                <p>Carry minimum data, keep devices encrypted, disable auto-connect Wi-Fi/Bluetooth, and have a recovery plan before travel.</p>
-            </section>
-        </div>
+        <h2 class="section-title">Assess & Plan Overview</h2>
+        <section class="card slide">
+            <h3>How to use this page in a presentation</h3>
+            <p>This page is organized like slide notes. Each topic has an update date, a table of contents, and practical points you can explain during a presentation.</p>
+            <div class="quick-links">
+                <a href="#physical">Physical Threats</a>
+                <a href="#identities">Multiple Identities</a>
+                <a href="#comms">Private Communications</a>
+                <a href="#travel">Safer Travel</a>
+                <a href="#tools">Related Tools</a>
+            </div>
+        </section>
 
-        <section class="card" style="margin-top:14px;">
+        <section class="card slide" id="physical">
+            <h3>Protect against physical threats</h3>
+            <p class="meta">Updated 9 April 2024</p>
+            <div class="two-col">
+                <div>
+                    <p class="toc-title">Table of Contents</p>
+                    <ul class="link-list">
+                        <li>Think about inexpensive, low-tech security measures</li>
+                        <li>Create a physical security policy, with colleagues and family</li>
+                        <li>Have a communication plan in case of emergency</li>
+                        <li>What goes in your plan?</li>
+                        <li>Create an office access policy</li>
+                        <li>When working outside your home or office</li>
+                        <li>Consider using surveillance cameras and motion sensors</li>
+                        <li>Protect your local network</li>
+                        <li>Prevent accidents and outages</li>
+                        <li>Protect against theft, tampering and confiscation</li>
+                        <li>Consider what can be seen</li>
+                        <li>Decide how you will dispose of sensitive information</li>
+                        <li>More resources</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="toc-title">Simple explanation for audience</p>
+                    <ul class="link-list">
+                        <li>Start with low-cost improvements: strong locks, cable locks, privacy screens, and visitor logging.</li>
+                        <li>Decide who can enter which area, at what times, and who reports incidents.</li>
+                        <li>Prepare emergency contacts and a clear call tree before problems happen.</li>
+                        <li>Protect routers and local Wi-Fi with strong admin passwords and updated firmware.</li>
+                        <li>Prevent data exposure from visible whiteboards, open desks, and poorly disposed papers.</li>
+                        <li>Plan secure destruction for papers, storage devices, and old hardware.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="presenter-note">Presenter note: emphasize that physical access often defeats digital security. If someone can touch the device, risk rises quickly.</div>
+        </section>
+
+        <section class="card slide" id="identities">
+            <h3>Create and protect multiple online identities</h3>
+            <p class="meta">Updated 9 September 2024</p>
+            <div class="two-col">
+                <div>
+                    <p class="toc-title">Table of Contents</p>
+                    <ul class="link-list">
+                        <li>Develop your strategy</li>
+                        <li>Check what information exists already on you online</li>
+                        <li>Get rid of unwanted information and old identities</li>
+                        <li>Map your social domains</li>
+                        <li>Create and secure an alternative identity</li>
+                        <li>Keep your identities separate</li>
+                        <li>Compartmentalize each identity using different devices, profiles or virtual environments</li>
+                        <li>Use payment methods that will not reveal your official identity</li>
+                        <li>Reflect on how to manage your multiple identities in physical spaces</li>
+                        <li>[Advanced] Create a website that cannot be connected to your identity</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="toc-title">Simple explanation for audience</p>
+                    <ul class="link-list">
+                        <li>Do not mix all activities in one account profile.</li>
+                        <li>Use different emails, usernames, browser profiles, and recovery numbers per identity.</li>
+                        <li>Reduce traceable links: profile photos, reused bios, or cross-post timing.</li>
+                        <li>Compartmentalize high-risk work with separate devices or virtual machines.</li>
+                        <li>For advanced anonymity, avoid personal payments and hosting methods tied to legal identity.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="presenter-note">Presenter note: identities fail when operational habits leak. Reused contact info is one of the fastest ways identities get linked.</div>
+        </section>
+
+        <section class="card slide" id="comms">
+            <h3>Protect the privacy of your online communications</h3>
+            <p class="meta">Updated 19 June 2025</p>
+            <div class="two-col">
+                <div>
+                    <p class="toc-title">Table of Contents</p>
+                    <ul class="link-list">
+                        <li>Map your communications and make a plan to protect them</li>
+                        <li>Create multiple identities</li>
+                        <li>Protect and anonymize your connections</li>
+                        <li>Use email more safely</li>
+                        <li>Use messaging apps more safely</li>
+                        <li>Take identifying information out of your photos and other files</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="toc-title">Simple explanation for audience</p>
+                    <ul class="link-list">
+                        <li>List who you communicate with, what you share, and what could go wrong.</li>
+                        <li>Use encrypted messaging for sensitive conversation and verify contacts.</li>
+                        <li>Use email carefully: strong account security, phishing checks, and limited metadata.</li>
+                        <li>When needed, anonymize network traffic and remove metadata from shared files.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="presenter-note">Presenter note: privacy is not one tool. It is a workflow: safer identity, safer connection, safer content sharing.</div>
+        </section>
+
+        <section class="card slide" id="travel">
+            <h3>Protect your information and devices while traveling</h3>
+            <p class="meta">Updated 3 June 2025</p>
+            <div class="two-col">
+                <div>
+                    <p class="toc-title">Table of Contents</p>
+                    <ul class="link-list">
+                        <li>Basic security practices</li>
+                        <li>Prepare for crossing borders</li>
+                        <li>Use encryption to protect your data and communications</li>
+                        <li>Public access</li>
+                        <li>Internet censorship and blockages</li>
+                        <li>Mobile phone security</li>
+                        <li>References</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="toc-title">Simple explanation for audience</p>
+                    <ul class="link-list">
+                        <li>Travel with minimum data and only essential devices.</li>
+                        <li>Expect device checks at borders and prepare a reduced-risk profile.</li>
+                        <li>Encrypt storage and keep backups in a safe location before departure.</li>
+                        <li>Avoid untrusted charging points and unknown public networks.</li>
+                        <li>Know legal and network restrictions in destination countries.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="presenter-note">Presenter note: travel security starts before leaving. Most damage happens when preparation is missing.</div>
+        </section>
+
+        <section class="card slide" id="tools">
+            <h3>Related Tools - Assess & Plan</h3>
+            <p class="meta">Updated 27 May 2025</p>
+            <p class="toc-title">Table of Contents</p>
+            <ul class="link-list">
+                <li>Protect against physical threats</li>
+            </ul>
+            <p>Use the following tools to protect your physical environment. You can also learn more about protecting communication privacy, physical safety, and travel safety.</p>
+
             <span class="tag ok">Related Guides</span>
             <ul class="link-list">
                 <li><a href="https://securityinabox.org/en/assess-plan/physical-security/" target="_blank" rel="noopener">Physical Security</a></li>
@@ -50,16 +236,14 @@
                 <li><a href="https://securityinabox.org/en/assess-plan/safer-travel/" target="_blank" rel="noopener">Safer Travel</a></li>
                 <li><a href="https://securityinabox.org/en/assess-plan/tools/" target="_blank" rel="noopener">Assess and Plan Tools</a></li>
             </ul>
-        </section>
 
-        <section class="card" style="margin-top:14px;">
-            <span class="tag warn">Tool Example</span>
+            <span class="tag warn">Protect against physical threats</span>
             <div class="tool-card">
                 <img src="https://securityinabox.org/assets/images/tools/haven.svg" alt="Haven app logo">
                 <div>
                     <h3>Haven (Android)</h3>
-                    <p>A free open-source app that can turn an Android phone into a basic intrusion alert and monitoring device.</p>
-                    <p><a href="https://github.com/guardianproject/haven" target="_blank" rel="noopener">Download APK from Github</a> | <a href="https://guardianproject.info/apps/org.havenapp.main/" target="_blank" rel="noopener">Documentation</a></p>
+                    <p>A free and open-source app that turns an Android device into a surveillance and motion-alert camera.</p>
+                    <p><a href="https://github.com/guardianproject/haven" target="_blank" rel="noopener">Download APK file from Github repository</a> | <a href="https://guardianproject.info/apps/org.havenapp.main/" target="_blank" rel="noopener">See documentation</a></p>
                 </div>
             </div>
         </section>
