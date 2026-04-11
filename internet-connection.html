@@ -83,6 +83,59 @@
             font-size: 0.9rem;
         }
 
+        .video-link {
+            display: inline-flex;
+            margin-top: 10px;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(135deg, #0d607d, #227593);
+            border-radius: 999px;
+            padding: 8px 12px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(16, 93, 121, 0.22);
+        }
+
+        .visual-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .visual-card {
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid #d8e6ec;
+            background: #fff;
+            box-shadow: 0 14px 24px rgba(43, 52, 55, 0.08);
+        }
+
+        .visual-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .visual-body {
+            padding: 10px 11px 12px;
+        }
+
+        .visual-body h4 {
+            margin: 0;
+            font-size: 0.98rem;
+            color: #153f51;
+        }
+
+        .visual-body p {
+            margin: 6px 0 0;
+            font-size: 0.88rem;
+            color: #4a6470;
+        }
+
         @media (max-width: 820px) {
             .ppt-explainer,
             .infographic-row {
@@ -108,6 +161,7 @@
             </div>
         </details>
         <nav>
+            <a href="home.html">Home</a>
             <a href="assess-plan.html">Assess</a>
             <a href="passwords.html">Passwords</a>
             <a href="communication.html">Communication</a>
@@ -118,105 +172,147 @@
     </header>
 
     <main>
-        <h2 class="section-title">Internet Connection Overview</h2>
+        <h2 class="section-title">Internet Connection</h2>
+
+        <section class="card slide" id="intro">
+            <div class="ppt-explainer">
+                <div>
+                    <p class="meta">Simple guide</p>
+                    <h3>Your Internet Connection</h3>
+                    <p>Your internet connection is how you browse websites, use apps, and send messages. If not secure, attackers or authorities can see, track, or block your activity.</p>
+                    <a class="video-link" href="https://www.youtube.com/results?search_query=internet+security+basics+for+beginners" target="_blank" rel="noopener">Watch short YouTube intro</a>
+                </div>
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Laptop connected to internet dashboard concept">
+            </div>
+        </section>
+
         <section class="card slide" id="works">
-            <h3>How the internet works and how it can be censored</h3>
-            <p class="meta">Updated 20 August 2024</p>
-            <p class="toc-title">Simple explanation</p>
+            <h3>How the Internet Works and How It Can Be Censored</h3>
+            <p><strong>How it works (simple):</strong></p>
             <ul class="link-list">
-                <li>How the internet works, and how some countries and other entities block or censor websites and online services</li>
-                <li>Understanding how websites and online services can be blocked</li>
-                <li>Your internet connection</li>
-                <li>How websites are blocked</li>
-                <li>How tools get around blocks</li>
-                <li>Further Reading</li>
+                <li>Your device sends a request</li>
+                <li>Internet connects you to a server</li>
+                <li>Server sends data back (website, video, app data)</li>
             </ul>
-            <div class="presenter-note">Presenter note: use a simple network diagram to show the path from device to website, then point out where blocking can happen.</div>
+            <div class="presenter-note">Like this: You ask, internet delivers.</div>
+            <p><strong>What is censorship?</strong> Blocking or controlling what you can access online.</p>
+            <p><strong>Examples:</strong></p>
+            <ul class="link-list">
+                <li>Government blocks certain websites</li>
+                <li>School blocks social media</li>
+                <li>ISP tracks your activity</li>
+            </ul>
+            <div class="infographic-row">
+                <div class="info-chip">Limited access to information</div>
+                <div class="info-chip">Monitoring of your activity</div>
+                <div class="info-chip">Loss of privacy</div>
+            </div>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=internet+censorship+explained+simply" target="_blank" rel="noopener">Short YouTube link for this concept</a>
         </section>
 
         <section class="card slide" id="browse">
-            <h3>Browse the web more securely</h3>
-            <p class="meta">Updated 12 September 2024</p>
-            <p class="toc-title">Simple explanation</p>
+            <h3>Browse the Web More Securely</h3>
+            <p><strong>Risks while browsing:</strong></p>
             <ul class="link-list">
-                <li>Choose a web browser... or two!</li>
-                <li>Change your device's default browser</li>
-                <li>Make sure your browser is up to date</li>
-                <li>Enter web addresses in the address bar</li>
-                <li>Set your default search engine</li>
-                <li>Review the camera, microphone and other site permissions</li>
-                <li>Secure your connections</li>
-                <li>Enable Tracking Protection settings</li>
-                <li>Turn off the browser's built-in password manager</li>
-                <li>Use protective browser add-ons/extensions</li>
-                <li>Remove unwanted add-ons/extensions and manage pop-ups</li>
-                <li>Delete your browsing history</li>
-                <li>Use private browsing or Incognito mode</li>
-                <li>Consider not showing what you last viewed on startup or your most visited sites</li>
-                <li>[Advanced] How to recognize and report a malicious website</li>
+                <li>Fake websites</li>
+                <li>Tracking cookies</li>
+                <li>Malware downloads</li>
             </ul>
-            <div class="presenter-note">Presenter note: show the audience that browser settings matter as much as the browser itself. Small changes can reduce tracking and malicious redirects.</div>
+            <div class="presenter-note">Example: Fake login page looks real and steals your password.</div>
+            <p><strong>How to stay safe:</strong></p>
+            <ul class="link-list">
+                <li>Check website URL and HTTPS</li>
+                <li>Avoid clicking unknown links</li>
+                <li>Use private or incognito mode when needed</li>
+                <li>Clear cookies regularly</li>
+                <li>Use secure browsers</li>
+            </ul>
+            <div class="presenter-note">Always ask: Is this website real?</div>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=safe+browsing+tips+for+beginners" target="_blank" rel="noopener">Short YouTube link for this concept</a>
         </section>
 
         <section class="card slide" id="circumvent">
-            <h3>Circumvent internet blockages and monitoring</h3>
-            <p class="meta">Updated 1 October 2025</p>
-            <p class="toc-title">Simple explanation</p>
+            <h3>Circumvent Internet Blockages and Monitoring</h3>
+            <p><strong>What it means:</strong> Access blocked content and reduce tracking.</p>
+            <p><strong>Situations:</strong></p>
             <ul class="link-list">
-                <li>Check if the website or service you can't reach is really blocked</li>
-                <li>Encrypt your connections and your DNS</li>
-                <li>Consider whether you really need a VPN service</li>
-                <li>Consider what a VPN service can do for you</li>
-                <li>Learn how to choose a VPN service</li>
-                <li>Choose a VPN service</li>
-                <li>Check if it works</li>
-                <li>Consider alternatives to regular VPN services</li>
-                <li>Try Tor</li>
-                <li>Consider accessing and sharing content on decentralized networks</li>
-                <li>Install software that isn't accessible in your country</li>
-                <li>Ask these questions about other tools to visit blocked websites</li>
-                <li>Advanced: Partner with OONI</li>
-                <li>Further Reading</li>
+                <li>Website blocked in your country</li>
+                <li>Network restricts access</li>
+                <li>Your activity is monitored</li>
             </ul>
-            <div class="presenter-note">Presenter note: explain that VPNs, Tor, DNS encryption, and decentralized networks solve different problems. One tool is not always the answer.</div>
+            <p><strong>How to bypass safely:</strong></p>
+            <ul class="link-list">
+                <li>Use VPN (Virtual Private Network)</li>
+                <li>Use proxy servers</li>
+                <li>Use privacy-focused browsers</li>
+            </ul>
+            <div class="presenter-note">VPN hides your real location and encrypts your data.</div>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=vpn+and+internet+blocking+explained" target="_blank" rel="noopener">Short YouTube link for this concept</a>
         </section>
 
         <section class="card slide" id="anonymize">
-            <h3>Anonymize your connections and communications</h3>
-            <p class="meta">Updated 17 September 2024</p>
-            <p class="toc-title">Simple explanation</p>
+            <h3>Anonymize Your Connections and Communications</h3>
+            <p><strong>What is anonymity?</strong> Hiding your identity online.</p>
+            <p><strong>Why it is important:</strong></p>
             <ul class="link-list">
-                <li>Consider whether you really need anonymity tools</li>
-                <li>Get ready</li>
-                <li>Browse the web anonymously</li>
-                <li>Use Tor securely by avoiding common mistakes</li>
-                <li>Anonymize all your connections</li>
-                <li>Chat anonymously</li>
-                <li>Exchange anonymous emails</li>
-                <li>Send and receive files anonymously</li>
-                <li>Use Tor Bridges if you can't connect to Tor automatically</li>
-                <li>[Advanced] Set up a whistleblowing platform to receive files anonymously</li>
+                <li>Prevent tracking</li>
+                <li>Protect your identity</li>
+                <li>Avoid surveillance</li>
             </ul>
-            <div class="presenter-note">Presenter note: make the distinction between privacy and anonymity. Privacy reduces data exposure; anonymity hides identity more strongly.</div>
+            <p><strong>How to stay anonymous:</strong></p>
+            <ul class="link-list">
+                <li>Use VPN</li>
+                <li>Use anonymous browsers like Tor</li>
+                <li>Avoid sharing personal info</li>
+                <li>Use different accounts and identities</li>
+            </ul>
+            <div class="presenter-note">Without protection, websites can see your IP, location, and activity. With anonymity tools, your identity is better hidden.</div>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=how+to+browse+anonymously+with+tor+for+beginners" target="_blank" rel="noopener">Short YouTube link for this concept</a>
+        </section>
+
+        <section class="card slide" id="visuals">
+            <h3>Visual Learning Hub</h3>
+            <p>Relatable visuals to help you remember internet safety concepts.</p>
+            <div class="visual-grid">
+                <article class="visual-card">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" alt="Network server and internet route concept">
+                    <div class="visual-body">
+                        <h4>Internet Flow</h4>
+                        <p>Your device, network, and server interaction can be blocked or monitored.</p>
+                    </div>
+                </article>
+                <article class="visual-card">
+                    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=1200&q=80" alt="Shield and lock cyber defense concept">
+                    <div class="visual-body">
+                        <h4>Safe Browsing</h4>
+                        <p>Secure habits reduce fake-site and malware risks.</p>
+                    </div>
+                </article>
+                <article class="visual-card">
+                    <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=1200&q=80" alt="VPN and hidden location concept on phone">
+                    <div class="visual-body">
+                        <h4>Privacy Tools</h4>
+                        <p>VPN and Tor help protect identity and reduce tracking.</p>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <section class="card slide" id="tools">
-            <h3>Related Tools - Internet Connection</h3>
-            <p class="meta">Updated 19 September 2024</p>
-            <p class="toc-title">Simple explanation</p>
+            <h3>Related Tools</h3>
             <ul class="link-list">
-                <li>Browse the web more securely</li>
-                <li>Visit blocked websites</li>
-                <li>Anonymize your connections</li>
-                <li>Access and share content on decentralized networks</li>
+                <li><strong>VPN:</strong> encrypts and hides your internet activity</li>
+                <li><strong>Secure Browsers:</strong> protect against tracking and unsafe websites</li>
+                <li><strong>Tor Browser:</strong> helps you browse anonymously</li>
+                <li><strong>DNS Security Tools:</strong> help block malicious websites</li>
             </ul>
-            <span class="tag ok">Related Guides</span>
-            <ul class="link-list">
-                <li><a href="https://securityinabox.org/en/internet-connection/browse-securely/" target="_blank" rel="noopener">Browse the web more securely</a></li>
-                <li><a href="https://securityinabox.org/en/internet-connection/circumvent-blocks/" target="_blank" rel="noopener">Visit blocked websites</a></li>
-                <li><a href="https://securityinabox.org/en/internet-connection/anonymize-connections/" target="_blank" rel="noopener">Anonymize your connections</a></li>
-                <li><a href="https://securityinabox.org/en/internet-connection/decentralized-networks/" target="_blank" rel="noopener">Access and share content on decentralized networks</a></li>
-            </ul>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=best+internet+privacy+tools+for+beginners" target="_blank" rel="noopener">Short YouTube link for this concept</a>
+        </section>
+
+        <section class="card slide" id="tip">
+            <h3>Final Important Tip</h3>
+            <p>Internet risks include tracking, censorship, and fake websites.</p>
+            <div class="presenter-note">Stay safe by browsing carefully, using protection tools, and protecting your identity.</div>
         </section>
     </main>
 

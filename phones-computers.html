@@ -83,6 +83,59 @@
             font-size: 0.9rem;
         }
 
+        .video-link {
+            display: inline-flex;
+            margin-top: 10px;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(135deg, #0d607d, #227593);
+            border-radius: 999px;
+            padding: 8px 12px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(16, 93, 121, 0.22);
+        }
+
+        .visual-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .visual-card {
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid #d8e6ec;
+            background: #fff;
+            box-shadow: 0 14px 24px rgba(43, 52, 55, 0.08);
+        }
+
+        .visual-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .visual-body {
+            padding: 10px 11px 12px;
+        }
+
+        .visual-body h4 {
+            margin: 0;
+            font-size: 0.98rem;
+            color: #153f51;
+        }
+
+        .visual-body p {
+            margin: 6px 0 0;
+            font-size: 0.88rem;
+            color: #4a6470;
+        }
+
         @media (max-width: 820px) {
             .ppt-explainer,
             .infographic-row {
@@ -108,6 +161,7 @@
             </div>
         </details>
         <nav>
+            <a href="home.html">Home</a>
             <a href="assess-plan.html">Assess</a>
             <a href="passwords.html">Passwords</a>
             <a href="communication.html">Communication</a>
@@ -118,171 +172,193 @@
     </header>
 
     <main>
-        <h2 class="section-title">Phones & Computers Overview</h2>
+        <h2 class="section-title">Phones & Computers</h2>
+
+        <section class="card slide" id="intro">
+            <div class="ppt-explainer">
+                <div>
+                    <p class="meta">Simple guide</p>
+                    <h3>Your phones and computers need strong protection</h3>
+                    <p>Your devices store personal data, passwords, photos, files, and important accounts. If compromised, attackers can get full access to your digital life.</p>
+                    <a class="video-link" href="https://www.youtube.com/results?search_query=device+security+basics+for+beginners" target="_blank" rel="noopener">Watch short YouTube intro</a>
+                </div>
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="Laptop and smartphone security concept">
+            </div>
+        </section>
+
         <section class="card slide" id="malware">
-            <h3>Protect against malware</h3>
-            <p class="meta">Updated 9 April 2024</p>
-            <p class="toc-title">Simple explanation</p>
+            <h3>Protect Against Malware</h3>
+            <p><strong>What is malware?</strong> Malicious software that harms or steals your data.</p>
+            <p><strong>Types of malware:</strong></p>
+            <div class="infographic-row">
+                <div class="info-chip">Virus: damages files</div>
+                <div class="info-chip">Spyware: secretly watches you</div>
+                <div class="info-chip">Ransomware: locks files for money</div>
+            </div>
+            <div class="infographic-row">
+                <div class="info-chip">Trojan: looks safe but harmful</div>
+                <div class="info-chip">Fake attachments</div>
+                <div class="info-chip">Infected USB devices</div>
+            </div>
+            <p><strong>How malware infects:</strong></p>
             <ul class="link-list">
-                <li>Update all software</li>
-                <li>Be aware that malicious actors may try to pressure you to act quickly or appeal to your emotions</li>
-                <li>Pause before you click and be cautious when you receive a link</li>
-                <li>Use caution when opening attachments</li>
-                <li>Make file extensions on your computer visible to avoid being tricked by malware</li>
-                <li>Avoid suspicious pop-up windows</li>
-                <li>Use antivirus or anti-malware</li>
-                <li>Use good hygiene with USB cables and devices</li>
-                <li>Use good hygiene with sensitive information</li>
-                <li>Secure other smart devices</li>
-                <li>Reboot your device often, and switch it off overnight</li>
-                <li>If you suspect your device has been infected...</li>
-                <li>Advanced strategies</li>
-                <li>Avoid unlicensed software and consider free and open-source alternatives</li>
+                <li>Downloading cracked apps/software</li>
+                <li>Clicking unknown links</li>
+                <li>Using infected USB devices</li>
+                <li>Opening fake email attachments</li>
             </ul>
-            <div class="presenter-note">Presenter note: emphasize behavior-based protection first. Most infections start with rushed clicks, untrusted files, or unsafe software sources.</div>
+            <p><strong>How to protect:</strong></p>
+            <ul class="link-list">
+                <li>Install apps only from trusted sources</li>
+                <li>Do not download cracked software</li>
+                <li>Use antivirus software</li>
+                <li>Keep your system updated</li>
+                <li>Avoid suspicious links and files</li>
+            </ul>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=malware+explained+for+beginners" target="_blank" rel="noopener">Short YouTube link for this concept</a>
         </section>
 
         <section class="card slide" id="android">
-            <h3>Protect your Android device</h3>
-            <p class="meta">Updated 17 September 2025</p>
-            <p class="toc-title">Simple explanation</p>
+            <h3>Protect Your Android Device</h3>
+            <p><strong>Risks:</strong></p>
             <ul class="link-list">
-                <li>Use the latest version of your device's operating system (OS)</li>
-                <li>Regularly update all installed apps</li>
-                <li>Use apps from trusted sources</li>
-                <li>Remove apps that you do not need and do not use</li>
-                <li>If possible, avoid using social media apps</li>
-                <li>Use privacy-friendly apps</li>
-                <li>Check your app permissions</li>
-                <li>Turn off location and wipe history</li>
-                <li>Create separate user accounts on your devices</li>
-                <li>Remove unneeded users associated with your device</li>
-                <li>Secure the Google accounts connected with your device</li>
-                <li>Set your screen to sleep and lock</li>
-                <li>Control what can be seen when your device is locked</li>
-                <li>Disable voice controls</li>
-                <li>Use a physical privacy filter that prevents others from seeing your screen</li>
-                <li>Use a camera cover</li>
-                <li>Turn off connectivity you are not using</li>
-                <li>Clear your saved wifi networks</li>
-                <li>Turn off sharing you are not using</li>
-                <li>Make sure your keyboard respects your privacy</li>
-                <li>Advanced: figure out whether someone has accessed your device without your permission (basic forensics)</li>
-                <li>Advanced: Use Android without a Google account</li>
-                <li>Advanced: Change the operating system of your Android device</li>
-                <li>See also</li>
+                <li>Fake apps</li>
+                <li>Malware from APK files</li>
+                <li>Unsafe permissions</li>
             </ul>
-            <div class="presenter-note">Presenter note: permissions and account security are critical. Even updated phones are risky if app permissions and connected accounts are not controlled.</div>
+            <p><strong>How to stay safe:</strong></p>
+            <ul class="link-list">
+                <li>Download apps only from Google Play Store</li>
+                <li>Avoid APK files from unknown websites</li>
+                <li>Check app permissions carefully</li>
+                <li>Enable screen lock (PIN or fingerprint)</li>
+                <li>Keep Android updated</li>
+            </ul>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=android+security+tips+for+beginners" target="_blank" rel="noopener">Short YouTube link for this concept</a>
         </section>
 
         <section class="card slide" id="ios">
-            <h3>Protect your iOS device</h3>
-            <p class="meta">Updated 24 September 2025</p>
-            <p class="toc-title">Simple explanation</p>
+            <h3>Protect Your iOS Device</h3>
+            <p><strong>Good news:</strong> iPhones are generally more secure, but risks still exist.</p>
+            <p><strong>Risks:</strong></p>
             <ul class="link-list">
-                <li>Use the latest version of your device's operating system (OS)</li>
-                <li>Turn Lockdown Mode on</li>
-                <li>Use apps from trusted sources</li>
-                <li>Remove apps that you do not need and do not use</li>
-                <li>Use privacy-friendly apps</li>
-                <li>If possible, avoid using social media apps</li>
-                <li>Check your app permissions</li>
-                <li>Turn off location and wipe history</li>
-                <li>Secure the accounts connected with your device</li>
-                <li>Remove permissions to access your device, accounts or information</li>
-                <li>Set your screen to sleep and lock</li>
-                <li>Control what can be seen when your device is locked</li>
-                <li>Disable voice controls</li>
-                <li>Use a physical privacy filter that prevents others from seeing your screen</li>
-                <li>Use a camera cover</li>
-                <li>Turn off connectivity you are not using</li>
-                <li>Clear your saved wifi networks</li>
-                <li>Turn off sharing you are not using</li>
-                <li>Make sure you are using the default iOS keyboard</li>
-                <li>Advanced: figure out whether someone has accessed your device without your permission (basic forensics)</li>
-                <li>More resources</li>
+                <li>Phishing attacks</li>
+                <li>Jailbreaking removes security protections</li>
+                <li>Unsafe Wi-Fi networks</li>
             </ul>
-            <div class="presenter-note">Presenter note: Lockdown Mode is important for high-risk users. For general users, updates, account hardening, and permissions are the biggest wins.</div>
+            <p><strong>How to protect:</strong></p>
+            <ul class="link-list">
+                <li>Do not jailbreak your device</li>
+                <li>Use strong passcode or Face ID</li>
+                <li>Download apps only from App Store</li>
+                <li>Enable Find My iPhone</li>
+                <li>Keep iOS updated</li>
+            </ul>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=iphone+security+tips+for+beginners" target="_blank" rel="noopener">Short YouTube link for this concept</a>
         </section>
 
         <section class="card slide" id="windows">
-            <h3>Protect your Windows computer</h3>
-            <p class="meta">Updated 30 September 2024</p>
-            <p class="toc-title">Simple explanation</p>
+            <h3>Protect Your Windows Computer</h3>
+            <p><strong>Common target for hackers.</strong></p>
+            <p><strong>Risks:</strong></p>
             <ul class="link-list">
-                <li>Use the latest version of your device's operating system (OS)</li>
-                <li>Regularly update all installed apps</li>
-                <li>Use programs and apps from trusted sources</li>
-                <li>Remove apps that you do not need and do not use</li>
-                <li>Use privacy-friendly apps</li>
-                <li>Check your app permissions</li>
-                <li>Turn off location and wipe history</li>
-                <li>Create separate user accounts on your devices</li>
-                <li>Remove unneeded accounts associated with your device</li>
-                <li>Secure the accounts connected to your device</li>
-                <li>Protect your user account and computer with a strong passphrase</li>
-                <li>Set your screen to sleep and lock</li>
-                <li>Control what can be seen when your device is locked</li>
-                <li>Make sure voice controls are not enabled</li>
-                <li>Use a physical privacy filter that prevents others from seeing your screen</li>
-                <li>Use a camera cover</li>
-                <li>Turn off connectivity you are not using</li>
-                <li>Clear your saved wifi networks</li>
-                <li>Turn off sharing you are not using</li>
-                <li>Turn off Autoplay</li>
-                <li>Turn off advertising and other privacy options</li>
-                <li>Protect your device with Windows Security</li>
-                <li>Use a firewall</li>
-                <li>Advanced: Stop malicious code from running</li>
-                <li>Advanced: figure out whether someone has accessed your device without your permission (basic forensics)</li>
+                <li>Viruses and ransomware</li>
+                <li>Fake software downloads</li>
+                <li>USB infections</li>
             </ul>
-            <div class="presenter-note">Presenter note: for Windows, combine update policy + Microsoft Defender + firewall + reduced app permissions for strongest baseline protection.</div>
+            <p><strong>How to protect:</strong></p>
+            <ul class="link-list">
+                <li>Install antivirus (Windows Defender is good baseline)</li>
+                <li>Keep Windows updated</li>
+                <li>Avoid cracked software</li>
+                <li>Scan USB before opening</li>
+                <li>Enable firewall</li>
+            </ul>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=windows+security+tips+for+beginners" target="_blank" rel="noopener">Short YouTube link for this concept</a>
         </section>
 
         <section class="card slide" id="mac">
-            <h3>Protect your Mac computer</h3>
-            <p class="meta">Updated 25 June 2024</p>
-            <p class="toc-title">Simple explanation</p>
+            <h3>Protect Your Mac Computer</h3>
+            <p><strong>More secure, but not 100% safe.</strong></p>
+            <p><strong>Risks:</strong></p>
             <ul class="link-list">
-                <li>Use the latest version of your device's operating system (OS)</li>
-                <li>Turn Lockdown Mode on</li>
-                <li>Use apps from trusted sources</li>
-                <li>Remove apps that you do not need and do not use</li>
-                <li>Use privacy-friendly apps</li>
-                <li>Check your app permissions</li>
-                <li>Turn off location and wipe history</li>
-                <li>Create separate user accounts on your devices</li>
-                <li>Remove unneeded accounts associated with your device</li>
-                <li>Secure the accounts connected with your device</li>
-                <li>Protect your user account and computer with a strong passphrase</li>
-                <li>Set your screen to sleep and lock</li>
-                <li>Control what can be seen when your device is locked</li>
-                <li>Disable voice controls</li>
-                <li>Use a physical privacy filter that prevents others from seeing your screen</li>
-                <li>Use a camera cover</li>
-                <li>Turn off connectivity you are not using</li>
-                <li>Clear your saved wifi networks</li>
-                <li>Turn off sharing you are not using</li>
-                <li>Use a firewall</li>
-                <li>Additional protection recommendations</li>
-                <li>Advanced: figure out whether someone has accessed your device without your permission (basic forensics)</li>
+                <li>Malware disguised as apps</li>
+                <li>Phishing attacks</li>
             </ul>
-            <div class="presenter-note">Presenter note: include Gatekeeper, FileVault, and firewall in your live demo checklist for Mac hardening.</div>
+            <p><strong>How to protect:</strong></p>
+            <ul class="link-list">
+                <li>Install apps only from trusted sources</li>
+                <li>Enable Gatekeeper</li>
+                <li>Keep macOS updated</li>
+                <li>Use strong passwords</li>
+                <li>Be careful with downloads</li>
+            </ul>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=macbook+security+tips+for+beginners" target="_blank" rel="noopener">Short YouTube link for this concept</a>
+        </section>
+
+        <section class="card slide" id="linux">
+            <h3>Protect Your Linux Computer</h3>
+            <p><strong>Strong security, but depends on the user.</strong></p>
+            <p><strong>Risks:</strong></p>
+            <ul class="link-list">
+                <li>Misconfiguration</li>
+                <li>Unsafe downloads</li>
+                <li>Weak permissions</li>
+            </ul>
+            <p><strong>How to protect:</strong></p>
+            <ul class="link-list">
+                <li>Use trusted repositories</li>
+                <li>Keep system updated</li>
+                <li>Use strong passwords</li>
+                <li>Limit root/admin access</li>
+                <li>Use firewall (UFW)</li>
+            </ul>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=linux+security+basics+for+beginners" target="_blank" rel="noopener">Short YouTube link for this concept</a>
+        </section>
+
+        <section class="card slide" id="visuals">
+            <h3>Visual Learning Hub</h3>
+            <p>Relatable visuals to remember device security concepts.</p>
+            <div class="visual-grid">
+                <article class="visual-card">
+                    <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1200&q=80" alt="Phone lock and app security concept">
+                    <div class="visual-body">
+                        <h4>Phone Security</h4>
+                        <p>App source and permissions matter for Android and iOS safety.</p>
+                    </div>
+                </article>
+                <article class="visual-card">
+                    <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?auto=format&fit=crop&w=1200&q=80" alt="Laptop with security code concept">
+                    <div class="visual-body">
+                        <h4>Computer Protection</h4>
+                        <p>Updates, antivirus, and firewall reduce malware risk.</p>
+                    </div>
+                </article>
+                <article class="visual-card">
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=80" alt="Security lock representing safer system access">
+                    <div class="visual-body">
+                        <h4>Safe Access</h4>
+                        <p>Strong passwords and careful downloads prevent most attacks.</p>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <section class="card slide" id="tools">
-            <h3>Related Tools - Phones & Computers</h3>
-            <p class="meta">Updated 26 June 2024</p>
-            <p class="toc-title">Simple explanation</p>
+            <h3>Related Tools</h3>
             <ul class="link-list">
-                <li>Scan your devices to detect malicious software</li>
-                <li>Protect your devices from infection</li>
-                <li>Firefox add-ons that help protect your device against malicious software</li>
+                <li><strong>Antivirus Software:</strong> detect and remove malware</li>
+                <li><strong>Firewall:</strong> block unauthorized access</li>
+                <li><strong>System Updates:</strong> fix security vulnerabilities</li>
+                <li><strong>Backup Tools:</strong> protect data from loss</li>
             </ul>
-            <span class="tag ok">Related Guide</span>
-            <ul class="link-list">
-                <li><a href="https://securityinabox.org/en/phones-and-computers/tools/" target="_blank" rel="noopener">Phones & Computers Tools</a></li>
-            </ul>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=device+security+tools+for+beginners" target="_blank" rel="noopener">Short YouTube link for this concept</a>
+        </section>
+
+        <section class="card slide" id="tip">
+            <h3>Final Important Tip</h3>
+            <p>Most device attacks happen because of downloading unsafe apps, ignoring updates, and clicking unknown links.</p>
+            <div class="presenter-note">Stay safe by installing carefully, updating regularly, and not trusting unknown sources.</div>
         </section>
     </main>
 
