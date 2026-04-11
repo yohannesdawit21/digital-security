@@ -48,14 +48,67 @@
             padding: 6px 11px;
             font-size: 0.85rem;
         }
+
+        .toc-title,
+        .quick-links {
+            display: none;
+        }
+
+        .ppt-explainer {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .ppt-explainer img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .infographic-row {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .info-chip {
+            background: #f1f4f6;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 820px) {
+            .ppt-explainer,
+            .infographic-row {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
-<body>
+<body class="chapter-page">
     <header>
         <h1>Your Phones and Computers</h1>
         <p>Presentation-ready guide to protect devices from malware and unauthorized access.</p>
+        <details class="mobile-menu">
+            <summary>☰ Menu</summary>
+            <div class="mobile-menu-panel">
+                <a href="home.html">Home</a>
+                <a href="assess-plan.html">Assess and Plan</a>
+                <a href="passwords.html">Your Passwords</a>
+                <a href="communication.html">Your Communication</a>
+                <a href="phones-computers.html">Your Phones and Computers</a>
+                <a href="internet-connection.html">Your Internet Connection</a>
+                <a href="files.html">Your Files</a>
+            </div>
+        </details>
         <nav>
-            <a href="index.html">Home</a>
+            <a href="home.html">Home</a>
             <a href="assess-plan.html">Assess and Plan</a>
             <a href="passwords.html">Your Passwords</a>
             <a href="communication.html">Your Communication</a>
@@ -66,23 +119,10 @@
 
     <main>
         <h2 class="section-title">Phones & Computers Overview</h2>
-        <section class="card slide">
-            <h3>How to use this page in a presentation</h3>
-            <p>Use each section as a slide script. Start from general malware hygiene, then go platform by platform.</p>
-            <div class="quick-links">
-                <a href="#malware">Protect against malware</a>
-                <a href="#android">Android</a>
-                <a href="#ios">iOS</a>
-                <a href="#windows">Windows</a>
-                <a href="#mac">Mac</a>
-                <a href="#tools">Related Tools</a>
-            </div>
-        </section>
-
         <section class="card slide" id="malware">
             <h3>Protect against malware</h3>
             <p class="meta">Updated 9 April 2024</p>
-            <p class="toc-title">Table of Contents</p>
+            <p class="toc-title">Simple explanation</p>
             <ul class="link-list">
                 <li>Update all software</li>
                 <li>Be aware that malicious actors may try to pressure you to act quickly or appeal to your emotions</li>
@@ -105,7 +145,7 @@
         <section class="card slide" id="android">
             <h3>Protect your Android device</h3>
             <p class="meta">Updated 17 September 2025</p>
-            <p class="toc-title">Table of Contents</p>
+            <p class="toc-title">Simple explanation</p>
             <ul class="link-list">
                 <li>Use the latest version of your device's operating system (OS)</li>
                 <li>Regularly update all installed apps</li>
@@ -138,7 +178,7 @@
         <section class="card slide" id="ios">
             <h3>Protect your iOS device</h3>
             <p class="meta">Updated 24 September 2025</p>
-            <p class="toc-title">Table of Contents</p>
+            <p class="toc-title">Simple explanation</p>
             <ul class="link-list">
                 <li>Use the latest version of your device's operating system (OS)</li>
                 <li>Turn Lockdown Mode on</li>
@@ -168,7 +208,7 @@
         <section class="card slide" id="windows">
             <h3>Protect your Windows computer</h3>
             <p class="meta">Updated 30 September 2024</p>
-            <p class="toc-title">Table of Contents</p>
+            <p class="toc-title">Simple explanation</p>
             <ul class="link-list">
                 <li>Use the latest version of your device's operating system (OS)</li>
                 <li>Regularly update all installed apps</li>
@@ -202,7 +242,7 @@
         <section class="card slide" id="mac">
             <h3>Protect your Mac computer</h3>
             <p class="meta">Updated 25 June 2024</p>
-            <p class="toc-title">Table of Contents</p>
+            <p class="toc-title">Simple explanation</p>
             <ul class="link-list">
                 <li>Use the latest version of your device's operating system (OS)</li>
                 <li>Turn Lockdown Mode on</li>
@@ -233,7 +273,7 @@
         <section class="card slide" id="tools">
             <h3>Related Tools - Phones & Computers</h3>
             <p class="meta">Updated 26 June 2024</p>
-            <p class="toc-title">Table of Contents</p>
+            <p class="toc-title">Simple explanation</p>
             <ul class="link-list">
                 <li>Scan your devices to detect malicious software</li>
                 <li>Protect your devices from infection</li>
@@ -247,5 +287,6 @@
     </main>
 
     <footer>Digital Security Handbook</footer>
+
 </body>
 </html>

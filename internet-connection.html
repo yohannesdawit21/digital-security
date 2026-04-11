@@ -48,14 +48,67 @@
             padding: 6px 11px;
             font-size: 0.85rem;
         }
+
+        .toc-title,
+        .quick-links {
+            display: none;
+        }
+
+        .ppt-explainer {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .ppt-explainer img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .infographic-row {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .info-chip {
+            background: #f1f4f6;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 820px) {
+            .ppt-explainer,
+            .infographic-row {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
-<body>
+<body class="chapter-page">
     <header>
         <h1>Your Internet Connection</h1>
         <p>Presentation-ready guide for censorship, secure browsing, VPNs, and anonymity.</p>
+        <details class="mobile-menu">
+            <summary>☰ Menu</summary>
+            <div class="mobile-menu-panel">
+                <a href="home.html">Home</a>
+                <a href="assess-plan.html">Assess and Plan</a>
+                <a href="passwords.html">Your Passwords</a>
+                <a href="communication.html">Your Communication</a>
+                <a href="phones-computers.html">Your Phones and Computers</a>
+                <a href="internet-connection.html">Your Internet Connection</a>
+                <a href="files.html">Your Files</a>
+            </div>
+        </details>
         <nav>
-            <a href="index.html">Home</a>
+            <a href="home.html">Home</a>
             <a href="assess-plan.html">Assess and Plan</a>
             <a href="passwords.html">Your Passwords</a>
             <a href="communication.html">Your Communication</a>
@@ -66,22 +119,10 @@
 
     <main>
         <h2 class="section-title">Internet Connection Overview</h2>
-        <section class="card slide">
-            <h3>How to use this page in a presentation</h3>
-            <p>Use each section like a slide: explain how the internet is monitored or blocked, then show the safer browsing, circumvention, and anonymity options.</p>
-            <div class="quick-links">
-                <a href="#works">How it works</a>
-                <a href="#browse">Browse securely</a>
-                <a href="#circumvent">Circumvent blocks</a>
-                <a href="#anonymize">Anonymize</a>
-                <a href="#tools">Related Tools</a>
-            </div>
-        </section>
-
         <section class="card slide" id="works">
             <h3>How the internet works and how it can be censored</h3>
             <p class="meta">Updated 20 August 2024</p>
-            <p class="toc-title">Table of Contents</p>
+            <p class="toc-title">Simple explanation</p>
             <ul class="link-list">
                 <li>How the internet works, and how some countries and other entities block or censor websites and online services</li>
                 <li>Understanding how websites and online services can be blocked</li>
@@ -96,7 +137,7 @@
         <section class="card slide" id="browse">
             <h3>Browse the web more securely</h3>
             <p class="meta">Updated 12 September 2024</p>
-            <p class="toc-title">Table of Contents</p>
+            <p class="toc-title">Simple explanation</p>
             <ul class="link-list">
                 <li>Choose a web browser... or two!</li>
                 <li>Change your device's default browser</li>
@@ -120,7 +161,7 @@
         <section class="card slide" id="circumvent">
             <h3>Circumvent internet blockages and monitoring</h3>
             <p class="meta">Updated 1 October 2025</p>
-            <p class="toc-title">Table of Contents</p>
+            <p class="toc-title">Simple explanation</p>
             <ul class="link-list">
                 <li>Check if the website or service you can't reach is really blocked</li>
                 <li>Encrypt your connections and your DNS</li>
@@ -143,7 +184,7 @@
         <section class="card slide" id="anonymize">
             <h3>Anonymize your connections and communications</h3>
             <p class="meta">Updated 17 September 2024</p>
-            <p class="toc-title">Table of Contents</p>
+            <p class="toc-title">Simple explanation</p>
             <ul class="link-list">
                 <li>Consider whether you really need anonymity tools</li>
                 <li>Get ready</li>
@@ -162,7 +203,7 @@
         <section class="card slide" id="tools">
             <h3>Related Tools - Internet Connection</h3>
             <p class="meta">Updated 19 September 2024</p>
-            <p class="toc-title">Table of Contents</p>
+            <p class="toc-title">Simple explanation</p>
             <ul class="link-list">
                 <li>Browse the web more securely</li>
                 <li>Visit blocked websites</li>
@@ -180,5 +221,6 @@
     </main>
 
     <footer>Digital Security Handbook</footer>
+
 </body>
 </html>

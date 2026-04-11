@@ -55,19 +55,70 @@
             font-size: 0.85rem;
         }
 
+        .toc-title,
+        .quick-links {
+            display: none;
+        }
+
+        .ppt-explainer {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .ppt-explainer img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .infographic-row {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .info-chip {
+            background: #f1f4f6;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
         @media (max-width: 820px) {
             .two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .ppt-explainer,
+            .infographic-row {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
-<body>
+<body class="chapter-page">
     <header>
         <h1>Assess & Plan</h1>
         <p>Presentation-ready guide: understand risk first, then build practical protection steps.</p>
+        <details class="mobile-menu">
+            <summary>☰ Menu</summary>
+            <div class="mobile-menu-panel">
+                <a href="home.html">Home</a>
+                <a href="assess-plan.html">Assess and Plan</a>
+                <a href="passwords.html">Your Passwords</a>
+                <a href="communication.html">Your Communication</a>
+                <a href="phones-computers.html">Your Phones and Computers</a>
+                <a href="internet-connection.html">Your Internet Connection</a>
+                <a href="files.html">Your Files</a>
+            </div>
+        </details>
         <nav>
-            <a href="index.html">Home</a>
+            <a href="home.html">Home</a>
             <a href="passwords.html">Your Passwords</a>
             <a href="communication.html">Your Communication</a>
             <a href="phones-computers.html">Your Phones and Computers</a>
@@ -79,24 +130,12 @@
     <main>
         <h2 class="section-title">Core Concepts</h2>
         <h2 class="section-title">Assess & Plan Overview</h2>
-        <section class="card slide">
-            <h3>How to use this page in a presentation</h3>
-            <p>This page is organized like slide notes. Each topic has an update date, a table of contents, and practical points you can explain during a presentation.</p>
-            <div class="quick-links">
-                <a href="#physical">Physical Threats</a>
-                <a href="#identities">Multiple Identities</a>
-                <a href="#comms">Private Communications</a>
-                <a href="#travel">Safer Travel</a>
-                <a href="#tools">Related Tools</a>
-            </div>
-        </section>
-
         <section class="card slide" id="physical">
             <h3>Protect against physical threats</h3>
             <p class="meta">Updated 9 April 2024</p>
             <div class="two-col">
                 <div>
-                    <p class="toc-title">Table of Contents</p>
+                    <p class="toc-title">Simple explanation</p>
                     <ul class="link-list">
                         <li>Think about inexpensive, low-tech security measures</li>
                         <li>Create a physical security policy, with colleagues and family</li>
@@ -133,7 +172,7 @@
             <p class="meta">Updated 9 September 2024</p>
             <div class="two-col">
                 <div>
-                    <p class="toc-title">Table of Contents</p>
+                    <p class="toc-title">Simple explanation</p>
                     <ul class="link-list">
                         <li>Develop your strategy</li>
                         <li>Check what information exists already on you online</li>
@@ -166,7 +205,7 @@
             <p class="meta">Updated 19 June 2025</p>
             <div class="two-col">
                 <div>
-                    <p class="toc-title">Table of Contents</p>
+                    <p class="toc-title">Simple explanation</p>
                     <ul class="link-list">
                         <li>Map your communications and make a plan to protect them</li>
                         <li>Create multiple identities</li>
@@ -194,7 +233,7 @@
             <p class="meta">Updated 3 June 2025</p>
             <div class="two-col">
                 <div>
-                    <p class="toc-title">Table of Contents</p>
+                    <p class="toc-title">Simple explanation</p>
                     <ul class="link-list">
                         <li>Basic security practices</li>
                         <li>Prepare for crossing borders</li>
@@ -222,7 +261,7 @@
         <section class="card slide" id="tools">
             <h3>Related Tools - Assess & Plan</h3>
             <p class="meta">Updated 27 May 2025</p>
-            <p class="toc-title">Table of Contents</p>
+            <p class="toc-title">Simple explanation</p>
             <ul class="link-list">
                 <li>Protect against physical threats</li>
             </ul>
@@ -250,5 +289,6 @@
     </main>
 
     <footer>Digital Security Handbook</footer>
+
 </body>
 </html>

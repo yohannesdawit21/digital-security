@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Security Handbook</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .home-shell {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .hero-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.9fr);
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .hero-panel {
+            min-height: 420px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hero-visual {
+            position: relative;
+            overflow: hidden;
+            min-height: 420px;
+            background: linear-gradient(135deg, #4a5268 0%, #565e74 100%);
+        }
+
+        .hero-visual img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(1) contrast(1.08);
+            opacity: 0.78;
+        }
+
+        .hero-visual::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(12, 15, 16, 0.1), rgba(12, 15, 16, 0.58));
+        }
+
+        .hero-overlay {
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            z-index: 1;
+            background: rgba(248, 249, 250, 0.7);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-radius: 18px;
+            padding: 18px;
+        }
+
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        .chapter-link {
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .chapter-link:hover {
+            text-decoration: none;
+        }
+
+        .chapter-link .badge {
+            display: inline-flex;
+            width: fit-content;
+            padding: 4px 8px;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            background: rgba(74, 82, 104, 0.08);
+            color: var(--brand);
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 6vw, 5.75rem);
+            line-height: 0.95;
+            letter-spacing: -0.05em;
+            margin: 0 0 18px;
+            color: #0c0f10;
+        }
+
+        .lead-copy {
+            max-width: 42rem;
+            font-size: 1.05rem;
+        }
+
+        .feature-strip {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .feature-strip .card {
+            min-height: 120px;
+        }
+
+        .feature-number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: rgba(86, 94, 116, 0.18);
+            line-height: 1;
+        }
+
+        .chapter-feature {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .chapter-feature-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: rgba(86, 94, 116, 0.18);
+            line-height: 1;
+        }
+
+        @media (max-width: 980px) {
+            .hero-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-panel,
+            .hero-visual {
+                min-height: auto;
+            }
+
+            .hero-visual {
+                min-height: 280px;
+            }
+
+            .chapter-feature {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .chapter-feature-number {
+                font-size: 2.4rem;
+            }
+        }
+    </style>
+</head>
+<body class="home-page">
+    <header>
+        <h1>Digital Security Handbook</h1>
+        <p>Clean landing page for the full handbook. Start here, then move through each topic page in order.</p>
+        <details class="mobile-menu">
+            <summary>☰ Menu</summary>
+            <div class="mobile-menu-panel">
+                <a href="home.html">Home</a>
+                <a href="assess-plan.html">Assess and Plan</a>
+                <a href="passwords.html">Your Passwords</a>
+                <a href="communication.html">Your Communication</a>
+                <a href="phones-computers.html">Your Phones and Computers</a>
+                <a href="internet-connection.html">Your Internet Connection</a>
+                <a href="files.html">Your Files</a>
+            </div>
+        </details>
+        <nav>
+            <a href="assess-plan.html">Assess and Plan</a>
+            <a href="passwords.html">Your Passwords</a>
+            <a href="communication.html">Your Communication</a>
+            <a href="phones-computers.html">Your Phones and Computers</a>
+            <a href="internet-connection.html">Your Internet Connection</a>
+            <a href="files.html">Your Files</a>
+        </nav>
+    </header>
+
+    <main class="home-shell">
+        <section class="card" style="margin-top:22px;">
+            <div class="hero-layout">
+                <div class="hero-panel">
+                    <div>
+                        <div class="badge" style="display:inline-flex;padding:4px 8px;border-radius:999px;font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;background:rgba(74,82,104,0.08);color:var(--brand);">Security Handbook v2.4</div>
+                        <h2 class="hero-title">Digital Security Handbook</h2>
+                        <p class="lead-copy">This handbook is split into separate pages so it is easier to present, teach, and navigate.</p>
+                        <p>Use the sections below as your learning path.</p>
+                    </div>
+                    <div class="feature-strip">
+                        <div class="card">
+                            <div class="feature-number">01</div>
+                            <h3>Assess &amp; Plan</h3>
+                            <p>Physical security, multiple identities, private communication, and safer travel.</p>
+                        </div>
+                        <div class="card">
+                            <div class="feature-number">02</div>
+                            <h3>Your Passwords</h3>
+                            <p>Strong passwords, password managers, and 2FA.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual card">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8WIQwwqUCRP8xEQhpXrLkj6rQlDgvHf2ePRO2pId7HlhXioRPBWNBR-4A1neRBE4OEC9WqxK8-a7FLf1x41fGYrYqCQwBTIapqTLC_o0LgJG1Qk13AKK-AMqz4ORftBWXhS0SbDFIZdhy3MBnB_CGV7_66YuTKCeGTCiqoOBps7QfLgKb56eWFZds36tEp-L2DiiHDxTsGC1gZpMXbwXa4SHnZjSLtiqEJjzmdFJqUkJSmcAaWOfR4y73Pcom2al8sfcgA7S06Wg" alt="Digital security visual" />
+                    <div class="hero-overlay">
+                        <div class="meta" style="margin:0 0 4px;">Live Status</div>
+                        <h3 style="margin:0 0 6px;">Core Protocols: Verified</h3>
+                        <p style="margin:0;">A curated intelligence briefing designed to secure your digital footprint.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top:22px;">
+            <div class="feature-strip">
+                <a class="card chapter-link" href="assess-plan.html">
+                    <div>
+                        <span class="badge">Chapter 01</span>
+                        <h3>Assess &amp; Plan</h3>
+                        <p>Identify your high-value assets and model potential threat vectors before implementing defense.</p>
+                    </div>
+                    <span style="font-weight:700;color:var(--brand);">Explore Methodology</span>
+                </a>
+
+                <a class="card chapter-link" href="passwords.html" style="background:#0c0f10;color:#fff;">
+                    <div>
+                        <span class="badge" style="background:rgba(255,255,255,0.08);color:#dae2fd;">Chapter 02</span>
+                        <h3 style="color:#fff;">Passwords</h3>
+                        <p style="color:rgba(255,255,255,0.72);">Mastering entropy, manager synchronization, and the elimination of the human factor.</p>
+                    </div>
+                    <span style="font-weight:700;color:#dae2fd;">Open Chapter</span>
+                </a>
+
+                <a class="card chapter-link" href="communication.html">
+                    <div>
+                        <span class="badge">Chapter 03</span>
+                        <h3>Communication</h3>
+                        <p>End-to-end encrypted messaging, metadata minimization, and secure telephony.</p>
+                    </div>
+                    <span style="font-weight:700;color:var(--brand);">Open Chapter</span>
+                </a>
+
+                <a class="card chapter-link" href="phones-computers.html">
+                    <div>
+                        <span class="badge">Chapter 04</span>
+                        <h3>Phones &amp; Computers</h3>
+                        <p>Hardening hardware, disabling telemetry, and BIOS-level security configurations.</p>
+                    </div>
+                    <span style="font-weight:700;color:var(--brand);">Open Chapter</span>
+                </a>
+
+                <a class="card chapter-link" href="internet-connection.html">
+                    <div>
+                        <span class="badge">Chapter 05</span>
+                        <h3>Internet Connection</h3>
+                        <p>VPN protocols, DNS over HTTPS, and securing your edge network infrastructure.</p>
+                    </div>
+                    <span style="font-weight:700;color:var(--brand);">Open Chapter</span>
+                </a>
+
+                <a class="card chapter-link chapter-feature" href="files.html">
+                    <div>
+                        <span class="badge">Chapter 06</span>
+                        <h3>Files</h3>
+                        <p>Persistent data at rest. Full disk encryption, secure deletion, and cold storage backups.</p>
+                    </div>
+                    <span class="chapter-feature-number">06</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="card" style="margin-top:22px;">
+            <h3>Navigation tip</h3>
+            <p>Each page includes direct links back to Home and to the other sections, so the handbook stays connected as one site.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Digital Security Handbook | Editorial security reference.</p>
+    </footer>
+
+</body>
+</html>
