@@ -7,161 +7,358 @@
     <link rel="stylesheet" href="assets/style.css">
     <style>
         .home-shell {
-            max-width: 1280px;
+            max-width: 1080px;
             margin: 0 auto;
         }
 
-        .hero-layout {
-            display: grid;
-            grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.9fr);
-            gap: 24px;
-            align-items: stretch;
+        .home-page header h1 {
+            font-size: clamp(1rem, 1.8vw, 1.4rem);
         }
 
-        .hero-panel {
-            min-height: 420px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .hero-visual {
+        .home-page header {
             position: relative;
-            overflow: hidden;
-            min-height: 420px;
-            background: linear-gradient(135deg, #4a5268 0%, #565e74 100%);
+            padding-right: 260px;
         }
 
-        .hero-visual img {
+        .home-page nav {
             position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(1) contrast(1.08);
-            opacity: 0.78;
+            top: 14px;
+            right: 14px;
+            margin-top: 0;
+            justify-content: flex-end;
+            gap: 4px;
+            overflow-x: auto;
+            padding-bottom: 0;
+            scrollbar-width: thin;
         }
 
-        .hero-visual::after {
+        .home-page nav a {
+            text-transform: none;
+            letter-spacing: 0;
+            font-size: 0.68rem;
+            padding: 5px 8px;
+            border-radius: 5px;
+            color: #1f2d33;
+            background: #ffffff;
+            border: 1px solid #dbe4e7;
+            box-shadow: none;
+            white-space: nowrap;
+        }
+
+        .home-page nav a:hover {
+            background: linear-gradient(135deg, #0f5d79, #2a7d9d);
+            color: #fff;
+            transform: none;
+        }
+
+        .home-hero {
+            margin-top: 18px;
+            padding: clamp(20px, 4vw, 34px);
+            border-radius: 22px;
+            background:
+                radial-gradient(circle at 14% 12%, rgba(64, 173, 163, 0.22) 0, rgba(64, 173, 163, 0) 46%),
+                radial-gradient(circle at 88% 5%, rgba(29, 94, 122, 0.2) 0, rgba(29, 94, 122, 0) 40%),
+                linear-gradient(145deg, #f8fffe 0%, #eff7fb 45%, #eef5f2 100%);
+            box-shadow: 0 26px 50px rgba(26, 72, 87, 0.12);
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+            gap: clamp(16px, 2.6vw, 30px);
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .home-hero::after {
             content: "";
             position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(12, 15, 16, 0.1), rgba(12, 15, 16, 0.58));
-        }
-
-        .hero-overlay {
-            position: absolute;
-            left: 20px;
-            right: 20px;
-            bottom: 20px;
-            z-index: 1;
-            background: rgba(248, 249, 250, 0.7);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-            border-radius: 18px;
-            padding: 18px;
-        }
-
-        .chapter-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 16px;
-            margin-top: 18px;
-        }
-
-        .chapter-link {
-            min-height: 180px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .chapter-link:hover {
-            text-decoration: none;
-        }
-
-        .chapter-link .badge {
-            display: inline-flex;
-            width: fit-content;
-            padding: 4px 8px;
+            width: 220px;
+            height: 220px;
             border-radius: 999px;
-            font-size: 0.72rem;
+            right: -80px;
+            bottom: -80px;
+            background: radial-gradient(circle, rgba(22, 115, 148, 0.22) 0, rgba(22, 115, 148, 0) 70%);
+            pointer-events: none;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.78rem;
             font-weight: 700;
-            letter-spacing: 0.14em;
             text-transform: uppercase;
-            background: rgba(74, 82, 104, 0.08);
-            color: var(--brand);
+            letter-spacing: 0.08em;
+            color: #11485d;
+            background: rgba(17, 72, 93, 0.12);
         }
 
         .hero-title {
-            font-size: clamp(3rem, 6vw, 5.75rem);
-            line-height: 0.95;
-            letter-spacing: -0.05em;
-            margin: 0 0 18px;
-            color: #0c0f10;
+            margin: 0;
+            font-size: clamp(1.65rem, 5vw, 2.55rem);
+            line-height: 1.2;
+            color: #000;
+            letter-spacing: -0.03em;
         }
 
-        .lead-copy {
-            max-width: 42rem;
-            font-size: 1.05rem;
+        .hero-copy {
+            margin: 12px 0 0;
+            color: #31515f;
+            max-width: 54ch;
+            font-size: 1.02rem;
         }
 
-        .feature-strip {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 12px;
+        .hero-cta {
             margin-top: 16px;
-        }
-
-        .feature-strip .card {
-            min-height: 120px;
-        }
-
-        .feature-number {
-            font-size: 2rem;
-            font-weight: 900;
-            color: rgba(86, 94, 116, 0.18);
-            line-height: 1;
-        }
-
-        .chapter-feature {
-            grid-column: 1 / -1;
-            display: grid;
-            grid-template-columns: 1fr auto;
+            display: inline-flex;
             align-items: center;
-            gap: 24px;
+            gap: 8px;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(135deg, #0f5d79, #24718f);
+            border-radius: 999px;
+            padding: 11px 16px;
+            font-weight: 700;
+            box-shadow: 0 12px 26px rgba(18, 85, 108, 0.3);
         }
 
-        .chapter-feature-number {
-            font-size: 4rem;
-            font-weight: 900;
-            color: rgba(86, 94, 116, 0.18);
-            line-height: 1;
+        .hero-visual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-visual figure {
+            margin: 0;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 16px 28px rgba(43, 52, 55, 0.2);
+        }
+
+        .hero-visual img {
+            width: 100%;
+            height: 100%;
+            min-height: 158px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .info-chip {
+            position: absolute;
+            right: 8px;
+            bottom: -12px;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 10px 12px;
+            box-shadow: 0 12px 24px rgba(43, 52, 55, 0.18);
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #1d4f63;
+        }
+
+        .protect-box {
+            margin-top: 22px;
+            padding: 24px;
+            border-radius: 16px;
+            background: #ffffff;
+            box-shadow: 0 20px 40px rgba(43, 52, 55, 0.07);
+        }
+
+        .protect-title {
+            margin: 0 0 10px;
+            font-size: clamp(1.3rem, 3.2vw, 1.8rem);
+            line-height: 1.2;
+            color: #111;
+            letter-spacing: -0.02em;
+        }
+
+        .protect-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .protect-item {
+            background: #f4fafb;
+            border: 1px solid #d8e6eb;
+            border-radius: 12px;
+            padding: 12px;
+            color: #1a4e61;
+            font-weight: 600;
+        }
+
+        .protect-warning {
+            margin-top: 12px;
+            font-weight: 700;
+            color: #752121;
+            background: #fe8983;
+            border-radius: 10px;
+            padding: 12px 14px;
+        }
+
+        .chapter-grid {
+            margin-top: 22px;
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .chapter-link {
+            text-decoration: none;
+            color: #123849;
+            background: linear-gradient(140deg, #ffffff 0%, #eff7f9 100%);
+            border-radius: 14px;
+            border: 1px solid #d5e5ea;
+            padding: 14px;
+            box-shadow: 0 12px 22px rgba(43, 52, 55, 0.08);
+        }
+
+        .chapter-link strong {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 1.02rem;
+        }
+
+        .chapter-link span {
+            color: #4d6974;
+            font-size: 0.92rem;
+        }
+
+        .photo-strip {
+            margin-top: 22px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .photo-strip figure {
+            margin: 0;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(43, 52, 55, 0.12);
+            position: relative;
+        }
+
+        .photo-strip img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-strip figcaption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 8px 10px;
+            color: #fff;
+            font-size: 0.82rem;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.68) 100%);
+        }
+
+        @keyframes riseIn {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes drift {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-4px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .home-hero,
+        .protect-box,
+        .chapter-grid,
+        .photo-strip {
+            animation: riseIn 0.7s ease both;
+        }
+
+        .protect-box {
+            animation-delay: 0.08s;
+        }
+
+        .chapter-grid {
+            animation-delay: 0.16s;
+        }
+
+        .photo-strip {
+            animation-delay: 0.24s;
+        }
+
+        .hero-visual figure:first-child {
+            animation: drift 4s ease-in-out infinite;
+        }
+
+        .hero-visual figure:last-child {
+            animation: drift 4s ease-in-out infinite 0.8s;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .home-hero,
+            .protect-box,
+            .chapter-grid,
+            .photo-strip,
+            .hero-visual figure {
+                animation: none !important;
+            }
         }
 
         @media (max-width: 980px) {
-            .hero-layout {
+            .home-shell {
+                max-width: 100%;
+            }
+
+            .home-page header {
+                padding-right: 18px;
+            }
+
+            .home-hero {
                 grid-template-columns: 1fr;
             }
 
-            .hero-panel,
-            .hero-visual {
-                min-height: auto;
+            .photo-strip {
+                grid-template-columns: 1fr 1fr;
             }
+        }
 
-            .hero-visual {
-                min-height: 280px;
-            }
-
-            .chapter-feature {
+        @media (max-width: 640px) {
+            .chapter-grid,
+            .photo-strip {
                 grid-template-columns: 1fr;
-                gap: 10px;
             }
 
-            .chapter-feature-number {
-                font-size: 2.4rem;
+            .hero-visual {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-visual img {
+                min-height: 150px;
+            }
+
+            .info-chip {
+                position: static;
+                margin-top: 6px;
+                width: fit-content;
             }
         }
     </style>
@@ -169,124 +366,85 @@
 <body class="home-page">
     <header>
         <h1>Digital Security Handbook</h1>
-        <p>Clean landing page for the full handbook. Start here, then move through each topic page in order.</p>
         <details class="mobile-menu">
             <summary>☰ Menu</summary>
             <div class="mobile-menu-panel">
                 <a href="home.html">Home</a>
-                <a href="assess-plan.html">Assess and Plan</a>
-                <a href="passwords.html">Your Passwords</a>
-                <a href="communication.html">Your Communication</a>
-                <a href="phones-computers.html">Your Phones and Computers</a>
-                <a href="internet-connection.html">Your Internet Connection</a>
-                <a href="files.html">Your Files</a>
+                <a href="assess-plan.html">Assess</a>
+                <a href="passwords.html">Passwords</a>
+                <a href="communication.html">Communication</a>
+                <a href="phones-computers.html">Devices</a>
+                <a href="internet-connection.html">Internet</a>
+                <a href="files.html">Files</a>
             </div>
         </details>
         <nav>
-            <a href="assess-plan.html">Assess and Plan</a>
-            <a href="passwords.html">Your Passwords</a>
-            <a href="communication.html">Your Communication</a>
-            <a href="phones-computers.html">Your Phones and Computers</a>
-            <a href="internet-connection.html">Your Internet Connection</a>
-            <a href="files.html">Your Files</a>
+            <a href="assess-plan.html">Assess</a>
+            <a href="passwords.html">Passwords</a>
+            <a href="communication.html">Communication</a>
+            <a href="phones-computers.html">Devices</a>
+            <a href="internet-connection.html">Internet</a>
+            <a href="files.html">Files</a>
         </nav>
     </header>
 
     <main class="home-shell">
-        <section class="card" style="margin-top:22px;">
-            <div class="hero-layout">
-                <div class="hero-panel">
-                    <div>
-                        <div class="badge" style="display:inline-flex;padding:4px 8px;border-radius:999px;font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;background:rgba(74,82,104,0.08);color:var(--brand);">Security Handbook v2.4</div>
-                        <h2 class="hero-title">Digital Security Handbook</h2>
-                        <p class="lead-copy">This handbook is split into separate pages so it is easier to present, teach, and navigate.</p>
-                        <p>Use the sections below as your learning path.</p>
-                    </div>
-                    <div class="feature-strip">
-                        <div class="card">
-                            <div class="feature-number">01</div>
-                            <h3>Assess &amp; Plan</h3>
-                            <p>Physical security, multiple identities, private communication, and safer travel.</p>
-                        </div>
-                        <div class="card">
-                            <div class="feature-number">02</div>
-                            <h3>Your Passwords</h3>
-                            <p>Strong passwords, password managers, and 2FA.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-visual card">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8WIQwwqUCRP8xEQhpXrLkj6rQlDgvHf2ePRO2pId7HlhXioRPBWNBR-4A1neRBE4OEC9WqxK8-a7FLf1x41fGYrYqCQwBTIapqTLC_o0LgJG1Qk13AKK-AMqz4ORftBWXhS0SbDFIZdhy3MBnB_CGV7_66YuTKCeGTCiqoOBps7QfLgKb56eWFZds36tEp-L2DiiHDxTsGC1gZpMXbwXa4SHnZjSLtiqEJjzmdFJqUkJSmcAaWOfR4y73Pcom2al8sfcgA7S06Wg" alt="Digital security visual" />
-                    <div class="hero-overlay">
-                        <div class="meta" style="margin:0 0 4px;">Live Status</div>
-                        <h3 style="margin:0 0 6px;">Core Protocols: Verified</h3>
-                        <p style="margin:0;">A curated intelligence briefing designed to secure your digital footprint.</p>
-                    </div>
-                </div>
+        <section class="home-hero" aria-labelledby="hero-title">
+            <div>
+                <span class="eyebrow">Security Made Practical</span>
+                <h2 class="hero-title" id="hero-title">Digital Security Handbook</h2>
+                <p class="hero-copy">Learn the core habits that keep your accounts, devices, communication, and files safe. The handbook is visual, simple, and designed for daily real-world use.</p>
+                <a class="hero-cta" href="assess-plan.html">Start with Assess and Plan</a>
+            </div>
+            <div class="hero-visual" aria-label="Digital security visuals">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80" alt="Laptop screen showing code and lock icon concept">
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=900&q=80" alt="Phone with secure login and shield concept">
+                </figure>
+                <div class="info-chip">Quick Win: Use unique passwords + 2FA</div>
             </div>
         </section>
 
-        <section style="margin-top:22px;">
-            <div class="feature-strip">
-                <a class="card chapter-link" href="assess-plan.html">
-                    <div>
-                        <span class="badge">Chapter 01</span>
-                        <h3>Assess &amp; Plan</h3>
-                        <p>Identify your high-value assets and model potential threat vectors before implementing defense.</p>
-                    </div>
-                    <span style="font-weight:700;color:var(--brand);">Explore Methodology</span>
-                </a>
+        <section class="protect-box" aria-labelledby="protect-title">
+            <h3 id="protect-title" class="protect-title">🛡️ WHAT DO YOU NEED TO PROTECT?</h3>
+            <p>Focus on these five areas first:</p>
+            <div class="protect-grid">
+                <div class="protect-item">Personal information: name, phone, passwords</div>
+                <div class="protect-item">Devices: phone, laptop, USB drives</div>
+                <div class="protect-item">Online accounts: email and social apps</div>
+                <div class="protect-item">Communication: messages, calls, chats</div>
+                <div class="protect-item">Identity: who you are online</div>
+            </div>
+            <p class="protect-warning">👉 If these are not protected, attackers can hack, spy, or steal your data.</p>
+        </section>
 
-                <a class="card chapter-link" href="passwords.html" style="background:#0c0f10;color:#fff;">
-                    <div>
-                        <span class="badge" style="background:rgba(255,255,255,0.08);color:#dae2fd;">Chapter 02</span>
-                        <h3 style="color:#fff;">Passwords</h3>
-                        <p style="color:rgba(255,255,255,0.72);">Mastering entropy, manager synchronization, and the elimination of the human factor.</p>
-                    </div>
-                    <span style="font-weight:700;color:#dae2fd;">Open Chapter</span>
-                </a>
-
-                <a class="card chapter-link" href="communication.html">
-                    <div>
-                        <span class="badge">Chapter 03</span>
-                        <h3>Communication</h3>
-                        <p>End-to-end encrypted messaging, metadata minimization, and secure telephony.</p>
-                    </div>
-                    <span style="font-weight:700;color:var(--brand);">Open Chapter</span>
-                </a>
-
-                <a class="card chapter-link" href="phones-computers.html">
-                    <div>
-                        <span class="badge">Chapter 04</span>
-                        <h3>Phones &amp; Computers</h3>
-                        <p>Hardening hardware, disabling telemetry, and BIOS-level security configurations.</p>
-                    </div>
-                    <span style="font-weight:700;color:var(--brand);">Open Chapter</span>
-                </a>
-
-                <a class="card chapter-link" href="internet-connection.html">
-                    <div>
-                        <span class="badge">Chapter 05</span>
-                        <h3>Internet Connection</h3>
-                        <p>VPN protocols, DNS over HTTPS, and securing your edge network infrastructure.</p>
-                    </div>
-                    <span style="font-weight:700;color:var(--brand);">Open Chapter</span>
-                </a>
-
-                <a class="card chapter-link chapter-feature" href="files.html">
-                    <div>
-                        <span class="badge">Chapter 06</span>
-                        <h3>Files</h3>
-                        <p>Persistent data at rest. Full disk encryption, secure deletion, and cold storage backups.</p>
-                    </div>
-                    <span class="chapter-feature-number">06</span>
-                </a>
+        <section aria-labelledby="chapter-title">
+            <h3 id="chapter-title" class="section-title" style="font-size:clamp(1.6rem, 4vw, 2.2rem); margin:22px 0 10px;">Choose a chapter</h3>
+            <div class="chapter-grid">
+                <a class="chapter-link" href="assess-plan.html"><strong>01. Assess and Plan</strong><span>Identify risks and create your protection checklist.</span></a>
+                <a class="chapter-link" href="passwords.html"><strong>02. Your Passwords</strong><span>Build strong password habits and use a manager.</span></a>
+                <a class="chapter-link" href="communication.html"><strong>03. Your Communication</strong><span>Protect messages, calls, and social interactions.</span></a>
+                <a class="chapter-link" href="phones-computers.html"><strong>04. Phones and Computers</strong><span>Secure your devices with updates and settings.</span></a>
+                <a class="chapter-link" href="internet-connection.html"><strong>05. Internet Connection</strong><span>Use trusted networks and safer browsing practices.</span></a>
+                <a class="chapter-link" href="files.html"><strong>06. Your Files</strong><span>Back up, encrypt, and organize important data.</span></a>
             </div>
         </section>
 
-        <section class="card" style="margin-top:22px;">
-            <h3>Navigation tip</h3>
-            <p>Each page includes direct links back to Home and to the other sections, so the handbook stays connected as one site.</p>
+        <section class="photo-strip" aria-label="Related security pictures">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=900&q=80" alt="Person using smartphone security settings">
+                <figcaption>Secure device settings</figcaption>
+            </figure>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=900&q=80" alt="Cybersecurity lock visualization on screen">
+                <figcaption>Stronger account protection</figcaption>
+            </figure>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=900&q=80" alt="Binary code image for data security concept">
+                <figcaption>Protect important files</figcaption>
+            </figure>
         </section>
     </main>
 

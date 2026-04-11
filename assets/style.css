@@ -53,6 +53,17 @@ header {
     box-shadow: 0 10px 24px rgba(43, 52, 55, 0.04);
 }
 
+.home-page header,
+.chapter-page header {
+    position: relative !important;
+    padding-right: 260px !important;
+}
+
+.home-page header h1,
+.chapter-page header h1 {
+    font-size: clamp(1rem, 1.8vw, 1.4rem) !important;
+}
+
 header h1 {
     margin: 0;
     font-size: clamp(1.4rem, 2.6vw, 2rem);
@@ -71,6 +82,20 @@ header p {
     display: none;
 }
 
+.home-page .mobile-menu,
+.chapter-page .mobile-menu {
+    position: absolute !important;
+    top: 14px !important;
+    right: 14px !important;
+    z-index: 30 !important;
+}
+
+.home-page .mobile-menu summary,
+.chapter-page .mobile-menu summary {
+    font-size: 0.72rem !important;
+    padding: 6px 10px !important;
+}
+
 .mobile-menu summary {
     list-style: none;
 }
@@ -84,6 +109,19 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+}
+
+.home-page nav,
+.chapter-page nav {
+    position: absolute !important;
+    top: 14px !important;
+    right: 14px !important;
+    margin-top: 0 !important;
+    justify-content: flex-end !important;
+    gap: 4px !important;
+    overflow-x: auto !important;
+    padding-bottom: 0 !important;
+    scrollbar-width: thin;
 }
 
 nav a {
@@ -101,10 +139,31 @@ nav a {
     transition: transform 0.2s ease, background 0.2s ease;
 }
 
+.home-page nav a,
+.chapter-page nav a {
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    font-size: 0.68rem !important;
+    padding: 5px 8px !important;
+    border-radius: 5px !important;
+    color: #1f2d33 !important;
+    background: #ffffff !important;
+    border: 1px solid #dbe4e7 !important;
+    box-shadow: none !important;
+    white-space: nowrap !important;
+}
+
 nav a:hover {
     background: linear-gradient(135deg, var(--primary), var(--primary-dim));
     color: var(--on-primary);
     transform: translateY(-1px);
+}
+
+.home-page nav a:hover,
+.chapter-page nav a:hover {
+    background: linear-gradient(135deg, #0f5d79, #2a7d9d) !important;
+    color: #fff !important;
+    transform: none !important;
 }
 
 main {
@@ -362,16 +421,26 @@ footer {
         padding-right: 90px;
     }
 
+    .home-page header,
+    .chapter-page header {
+        padding-right: 90px;
+    }
+
     header nav {
         display: none;
     }
 
     .mobile-menu {
         display: block;
-        position: absolute;
-        top: 14px;
-        right: 14px;
-        z-index: 30;
+    }
+
+    .home-page nav,
+    .chapter-page nav {
+        position: static;
+        justify-content: flex-start;
+        margin-top: 10px;
+        overflow-x: auto;
+        padding-bottom: 2px;
     }
 
     .mobile-menu summary {

@@ -7,25 +7,84 @@
     <link rel="stylesheet" href="assets/style.css">
     <style>
         .slide {
-            margin-bottom: 14px;
+            margin-bottom: 16px;
         }
 
-        .meta {
-            font-size: 0.86rem;
-            color: #5b6b84;
-            margin: 4px 0 12px;
+        .chapter-page nav {
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            margin-top: 8px;
         }
 
-        .toc-title {
-            margin-bottom: 4px;
-            font-weight: 700;
-            font-size: 0.95rem;
+        .chapter-page nav a {
+            font-size: 0.7rem;
+            letter-spacing: 0.02em;
+            padding: 5px 8px;
+            border-radius: 7px;
         }
 
-        .two-col {
+        .chapter-page .mobile-menu summary {
+            font-size: 0.72rem;
+            padding: 6px 10px;
+        }
+
+        .learn-hero {
+            margin: 6px 0 18px;
+            padding: clamp(18px, 3.5vw, 28px);
+            border-radius: 18px;
+            background:
+                radial-gradient(circle at 15% 18%, rgba(81, 166, 201, 0.2) 0, rgba(81, 166, 201, 0) 44%),
+                radial-gradient(circle at 92% 8%, rgba(91, 201, 146, 0.2) 0, rgba(91, 201, 146, 0) 40%),
+                linear-gradient(140deg, #f6fcff 0%, #f1f7ff 46%, #eefaf5 100%);
+            box-shadow: 0 20px 36px rgba(22, 81, 96, 0.12);
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
+            grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+            gap: 16px;
+            align-items: center;
+        }
+
+        .learn-hero h3 {
+            margin: 0 0 10px;
+            font-size: clamp(1.4rem, 3.8vw, 2.1rem);
+            letter-spacing: -0.02em;
+            color: #0f3547;
+        }
+
+        .learn-hero p {
+            margin: 0;
+            color: #294d5e;
+        }
+
+        .hero-tags {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .hero-tags span {
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: #124b5f;
+            background: rgba(18, 75, 95, 0.1);
+        }
+
+        .learn-hero figure {
+            margin: 0;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 14px 28px rgba(26, 74, 93, 0.2);
+        }
+
+        .learn-hero img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
         }
 
         .presenter-note {
@@ -38,65 +97,139 @@
             margin-top: 10px;
         }
 
-        .quick-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
+        .video-link {
+            display: inline-flex;
             margin-top: 10px;
-        }
-
-        .quick-links a {
-            text-decoration: none;
-            color: #0b57d0;
-            border: 1px solid #c7dafc;
-            background: #f6faff;
-            border-radius: 999px;
-            padding: 6px 11px;
-            font-size: 0.85rem;
-        }
-
-        .toc-title,
-        .quick-links {
-            display: none;
-        }
-
-        .ppt-explainer {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 16px;
             align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(135deg, #0d607d, #227593);
+            border-radius: 999px;
+            padding: 8px 12px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(16, 93, 121, 0.22);
         }
 
-        .ppt-explainer img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 12px;
-        }
-
-        .infographic-row {
+        .visual-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 10px;
-            margin-top: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 12px;
         }
 
-        .info-chip {
-            background: #f1f4f6;
-            border-radius: 10px;
-            padding: 10px;
-            text-align: center;
-            font-size: 0.9rem;
+        .visual-card {
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid #d8e6ec;
+            background: #fff;
+            box-shadow: 0 14px 24px rgba(43, 52, 55, 0.08);
+        }
+
+        .visual-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .visual-body {
+            padding: 10px 11px 12px;
+        }
+
+        .visual-body h4 {
+            margin: 0;
+            font-size: 0.98rem;
+            color: #153f51;
+        }
+
+        .visual-body p {
+            margin: 6px 0 0;
+            font-size: 0.88rem;
+            color: #4a6470;
+        }
+
+        @keyframes riseIn {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes softFloat {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .learn-hero,
+        .slide,
+        .visual-card {
+            animation: riseIn 0.7s ease both;
+        }
+
+        .learn-hero figure {
+            animation: softFloat 4.4s ease-in-out infinite;
+        }
+
+        .slide:nth-of-type(2) {
+            animation-delay: 0.04s;
+        }
+
+        .slide:nth-of-type(3) {
+            animation-delay: 0.08s;
+        }
+
+        .slide:nth-of-type(4) {
+            animation-delay: 0.12s;
+        }
+
+        .slide:nth-of-type(5) {
+            animation-delay: 0.16s;
+        }
+
+        .slide:nth-of-type(6) {
+            animation-delay: 0.2s;
+        }
+
+        .slide:nth-of-type(7) {
+            animation-delay: 0.24s;
+        }
+
+        .slide:nth-of-type(8) {
+            animation-delay: 0.28s;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .learn-hero,
+            .slide,
+            .visual-card,
+            .learn-hero figure {
+                animation: none !important;
+            }
         }
 
         @media (max-width: 820px) {
-            .two-col {
+            .learn-hero {
                 grid-template-columns: 1fr;
             }
 
-            .ppt-explainer,
-            .infographic-row {
-                grid-template-columns: 1fr;
+            .learn-hero img {
+                height: 190px;
             }
         }
     </style>
@@ -109,182 +242,193 @@
             <summary>☰ Menu</summary>
             <div class="mobile-menu-panel">
                 <a href="home.html">Home</a>
-                <a href="assess-plan.html">Assess and Plan</a>
-                <a href="passwords.html">Your Passwords</a>
-                <a href="communication.html">Your Communication</a>
-                <a href="phones-computers.html">Your Phones and Computers</a>
-                <a href="internet-connection.html">Your Internet Connection</a>
-                <a href="files.html">Your Files</a>
+                <a href="assess-plan.html">Assess</a>
+                <a href="passwords.html">Passwords</a>
+                <a href="communication.html">Communication</a>
+                <a href="phones-computers.html">Devices</a>
+                <a href="internet-connection.html">Internet</a>
+                <a href="files.html">Files</a>
             </div>
         </details>
         <nav>
-            <a href="home.html">Home</a>
-            <a href="passwords.html">Your Passwords</a>
-            <a href="communication.html">Your Communication</a>
-            <a href="phones-computers.html">Your Phones and Computers</a>
-            <a href="internet-connection.html">Your Internet Connection</a>
-            <a href="files.html">Your Files</a>
+            <a href="assess-plan.html">Assess</a>
+            <a href="passwords.html">Passwords</a>
+            <a href="communication.html">Communication</a>
+            <a href="phones-computers.html">Devices</a>
+            <a href="internet-connection.html">Internet</a>
+            <a href="files.html">Files</a>
         </nav>
     </header>
 
     <main>
-        <h2 class="section-title">Core Concepts</h2>
-        <h2 class="section-title">Assess & Plan Overview</h2>
-        <section class="card slide" id="physical">
-            <h3>Protect against physical threats</h3>
-            <p class="meta">Updated 9 April 2024</p>
-            <div class="two-col">
-                <div>
-                    <p class="toc-title">Simple explanation</p>
-                    <ul class="link-list">
-                        <li>Think about inexpensive, low-tech security measures</li>
-                        <li>Create a physical security policy, with colleagues and family</li>
-                        <li>Have a communication plan in case of emergency</li>
-                        <li>What goes in your plan?</li>
-                        <li>Create an office access policy</li>
-                        <li>When working outside your home or office</li>
-                        <li>Consider using surveillance cameras and motion sensors</li>
-                        <li>Protect your local network</li>
-                        <li>Prevent accidents and outages</li>
-                        <li>Protect against theft, tampering and confiscation</li>
-                        <li>Consider what can be seen</li>
-                        <li>Decide how you will dispose of sensitive information</li>
-                        <li>More resources</li>
-                    </ul>
+        <h2 class="section-title">Assess & Plan</h2>
+
+        <section class="learn-hero" aria-label="Assess and plan visual intro">
+            <div>
+                <h3>Think like a defender, not a victim</h3>
+                <p>This chapter helps you spot risk early, make simple protection habits, and avoid common attacks before they start.</p>
+                <div class="hero-tags">
+                    <span>Risk First</span>
+                    <span>Simple Steps</span>
+                    <span>Daily Safety</span>
                 </div>
-                <div>
-                    <p class="toc-title">Simple explanation for audience</p>
-                    <ul class="link-list">
-                        <li>Start with low-cost improvements: strong locks, cable locks, privacy screens, and visitor logging.</li>
-                        <li>Decide who can enter which area, at what times, and who reports incidents.</li>
-                        <li>Prepare emergency contacts and a clear call tree before problems happen.</li>
-                        <li>Protect routers and local Wi-Fi with strong admin passwords and updated firmware.</li>
-                        <li>Prevent data exposure from visible whiteboards, open desks, and poorly disposed papers.</li>
-                        <li>Plan secure destruction for papers, storage devices, and old hardware.</li>
-                    </ul>
-                </div>
+                <a class="video-link" href="https://www.youtube.com/results?search_query=cybersecurity+basics+for+beginners+5+minutes" target="_blank" rel="noopener">Watch quick YouTube intro</a>
             </div>
-            <div class="presenter-note">Presenter note: emphasize that physical access often defeats digital security. If someone can touch the device, risk rises quickly.</div>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=80" alt="Laptop showing security dashboard and lock visual">
+            </figure>
+        </section>
+
+        <section class="card slide" id="protect-basics">
+            <h3>What Do You Need to Protect?</h3>
+            <ul class="link-list">
+                <li><strong>Personal Information</strong> (name, phone, passwords)</li>
+                <li><strong>Devices</strong> (phone, laptop, USB)</li>
+                <li><strong>Online Accounts</strong> (email, social media)</li>
+                <li><strong>Communication</strong> (messages, calls)</li>
+                <li><strong>Identity</strong> (who you are online)</li>
+            </ul>
+            <div class="presenter-note">If these are not protected, attackers can hack, spy, or steal your data.</div>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=what+is+digital+identity+explained+simply" target="_blank" rel="noopener">Short YouTube link for this concept</a>
+        </section>
+
+        <section class="card slide" id="overview">
+            <h3>Assess & Plan</h3>
+            <p><strong>What it means:</strong> Think before acting and understand your risks.</p>
+            <p><strong>Simple explanation:</strong></p>
+            <ul class="link-list">
+                <li>What can go wrong? (hacking, theft)</li>
+                <li>What do you want to protect?</li>
+                <li>How important is your data?</li>
+            </ul>
+            <p><strong>Example:</strong> If you are a student, protect assignments, accounts, and email.</p>
+            <p><strong>How to stay safe:</strong></p>
+            <ul class="link-list">
+                <li>Identify your weak points</li>
+                <li>Make a simple security plan</li>
+                <li>Always be prepared</li>
+            </ul>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=threat+modeling+for+beginners+in+5+minutes" target="_blank" rel="noopener">Short YouTube link for this concept</a>
+        </section>
+
+        <section class="card slide" id="physical">
+            <h3>Protect Against Physical Threats</h3>
+            <p><strong>What are physical threats?</strong> Someone steals or accesses your device physically.</p>
+            <p><strong>Examples:</strong></p>
+            <ul class="link-list">
+                <li>Phone stolen</li>
+                <li>Someone opens your laptop without permission</li>
+                <li>USB infected with virus</li>
+            </ul>
+            <p><strong>How to protect:</strong></p>
+            <ul class="link-list">
+                <li>Use password or fingerprint lock</li>
+                <li>Do not leave devices unattended</li>
+                <li>Avoid using unknown USBs</li>
+                <li>Keep your devices in safe places</li>
+            </ul>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=physical+security+for+laptops+and+phones" target="_blank" rel="noopener">Short YouTube link for this concept</a>
         </section>
 
         <section class="card slide" id="identities">
-            <h3>Create and protect multiple online identities</h3>
-            <p class="meta">Updated 9 September 2024</p>
-            <div class="two-col">
-                <div>
-                    <p class="toc-title">Simple explanation</p>
-                    <ul class="link-list">
-                        <li>Develop your strategy</li>
-                        <li>Check what information exists already on you online</li>
-                        <li>Get rid of unwanted information and old identities</li>
-                        <li>Map your social domains</li>
-                        <li>Create and secure an alternative identity</li>
-                        <li>Keep your identities separate</li>
-                        <li>Compartmentalize each identity using different devices, profiles or virtual environments</li>
-                        <li>Use payment methods that will not reveal your official identity</li>
-                        <li>Reflect on how to manage your multiple identities in physical spaces</li>
-                        <li>[Advanced] Create a website that cannot be connected to your identity</li>
-                    </ul>
-                </div>
-                <div>
-                    <p class="toc-title">Simple explanation for audience</p>
-                    <ul class="link-list">
-                        <li>Do not mix all activities in one account profile.</li>
-                        <li>Use different emails, usernames, browser profiles, and recovery numbers per identity.</li>
-                        <li>Reduce traceable links: profile photos, reused bios, or cross-post timing.</li>
-                        <li>Compartmentalize high-risk work with separate devices or virtual machines.</li>
-                        <li>For advanced anonymity, avoid personal payments and hosting methods tied to legal identity.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="presenter-note">Presenter note: identities fail when operational habits leak. Reused contact info is one of the fastest ways identities get linked.</div>
+            <h3>Create and Protect Multiple Online Identities</h3>
+            <p><strong>What it means:</strong> Do not use one account for everything.</p>
+            <p><strong>Example:</strong></p>
+            <ul class="link-list">
+                <li>One email for school or work</li>
+                <li>One email for social media</li>
+                <li>One email for unknown websites</li>
+            </ul>
+            <p><strong>Why it is important:</strong> If one account is hacked, others can still stay safe.</p>
+            <p><strong>How to protect:</strong></p>
+            <ul class="link-list">
+                <li>Use different passwords</li>
+                <li>Do not share personal information everywhere</li>
+                <li>Use minimal or non-sensitive info when possible</li>
+            </ul>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=how+to+separate+online+identities+safely" target="_blank" rel="noopener">Short YouTube link for this concept</a>
         </section>
 
         <section class="card slide" id="comms">
-            <h3>Protect the privacy of your online communications</h3>
-            <p class="meta">Updated 19 June 2025</p>
-            <div class="two-col">
-                <div>
-                    <p class="toc-title">Simple explanation</p>
-                    <ul class="link-list">
-                        <li>Map your communications and make a plan to protect them</li>
-                        <li>Create multiple identities</li>
-                        <li>Protect and anonymize your connections</li>
-                        <li>Use email more safely</li>
-                        <li>Use messaging apps more safely</li>
-                        <li>Take identifying information out of your photos and other files</li>
-                    </ul>
-                </div>
-                <div>
-                    <p class="toc-title">Simple explanation for audience</p>
-                    <ul class="link-list">
-                        <li>List who you communicate with, what you share, and what could go wrong.</li>
-                        <li>Use encrypted messaging for sensitive conversation and verify contacts.</li>
-                        <li>Use email carefully: strong account security, phishing checks, and limited metadata.</li>
-                        <li>When needed, anonymize network traffic and remove metadata from shared files.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="presenter-note">Presenter note: privacy is not one tool. It is a workflow: safer identity, safer connection, safer content sharing.</div>
+            <h3>Protect Your Online Communication Privacy</h3>
+            <p><strong>What is communication privacy?</strong> Keeping your messages and calls private.</p>
+            <p><strong>Risks:</strong></p>
+            <ul class="link-list">
+                <li>Hackers reading messages</li>
+                <li>Tracking your conversations</li>
+                <li>Data leaks</li>
+            </ul>
+            <p><strong>How to protect:</strong></p>
+            <ul class="link-list">
+                <li>Use secure apps (encrypted messaging)</li>
+                <li>Avoid public Wi-Fi for sensitive chats</li>
+                <li>Do not share passwords or private information</li>
+                <li>Turn on two-factor authentication (2FA)</li>
+            </ul>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=encrypted+messaging+and+2fa+explained" target="_blank" rel="noopener">Short YouTube link for this concept</a>
         </section>
 
         <section class="card slide" id="travel">
-            <h3>Protect your information and devices while traveling</h3>
-            <p class="meta">Updated 3 June 2025</p>
-            <div class="two-col">
-                <div>
-                    <p class="toc-title">Simple explanation</p>
-                    <ul class="link-list">
-                        <li>Basic security practices</li>
-                        <li>Prepare for crossing borders</li>
-                        <li>Use encryption to protect your data and communications</li>
-                        <li>Public access</li>
-                        <li>Internet censorship and blockages</li>
-                        <li>Mobile phone security</li>
-                        <li>References</li>
-                    </ul>
-                </div>
-                <div>
-                    <p class="toc-title">Simple explanation for audience</p>
-                    <ul class="link-list">
-                        <li>Travel with minimum data and only essential devices.</li>
-                        <li>Expect device checks at borders and prepare a reduced-risk profile.</li>
-                        <li>Encrypt storage and keep backups in a safe location before departure.</li>
-                        <li>Avoid untrusted charging points and unknown public networks.</li>
-                        <li>Know legal and network restrictions in destination countries.</li>
-                    </ul>
-                </div>
+            <h3>Protect Devices While Traveling</h3>
+            <p><strong>Why this is important:</strong> Travel increases risk of loss, theft, or hacking.</p>
+            <p><strong>Examples:</strong></p>
+            <ul class="link-list">
+                <li>Using public Wi-Fi at an airport</li>
+                <li>Losing your phone</li>
+                <li>Someone accessing your laptop</li>
+            </ul>
+            <p><strong>How to protect:</strong></p>
+            <ul class="link-list">
+                <li>Back up your data before travel</li>
+                <li>Avoid public Wi-Fi or use a VPN</li>
+                <li>Log out of accounts on shared devices</li>
+                <li>Keep devices with you at all times</li>
+            </ul>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=travel+cybersecurity+tips+for+beginners" target="_blank" rel="noopener">Short YouTube link for this concept</a>
+        </section>
+
+        <section class="card slide" id="visual-learning">
+            <h3>Visual Learning Hub</h3>
+            <p>Quick visuals that match the topics above and make them easier to remember.</p>
+            <div class="visual-grid">
+                <article class="visual-card">
+                    <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1200&q=80" alt="Person reviewing phone security settings">
+                    <div class="visual-body">
+                        <h4>Device Safety</h4>
+                        <p>Lock screens, updates, and app permissions reduce common risks.</p>
+                    </div>
+                </article>
+                <article class="visual-card">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80" alt="Digital lock icon representing account protection">
+                    <div class="visual-body">
+                        <h4>Account Protection</h4>
+                        <p>Use strong passwords, 2FA, and separate accounts by purpose.</p>
+                    </div>
+                </article>
+                <article class="visual-card">
+                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80" alt="Code and data stream for communication privacy concept">
+                    <div class="visual-body">
+                        <h4>Private Communication</h4>
+                        <p>Encrypted apps and safer networks protect messages from interception.</p>
+                    </div>
+                </article>
             </div>
-            <div class="presenter-note">Presenter note: travel security starts before leaving. Most damage happens when preparation is missing.</div>
         </section>
 
         <section class="card slide" id="tools">
-            <h3>Related Tools - Assess & Plan</h3>
-            <p class="meta">Updated 27 May 2025</p>
-            <p class="toc-title">Simple explanation</p>
+            <h3>Related Tools (Help You Stay Safe)</h3>
             <ul class="link-list">
-                <li>Protect against physical threats</li>
+                <li><strong>Password Managers:</strong> Store strong passwords safely</li>
+                <li><strong>VPN (Virtual Private Network):</strong> Protect your internet connection</li>
+                <li><strong>Antivirus Software:</strong> Detect and remove viruses</li>
+                <li><strong>Secure Messaging Apps:</strong> Protect your chats</li>
             </ul>
-            <p>Use the following tools to protect your physical environment. You can also learn more about protecting communication privacy, physical safety, and travel safety.</p>
+        </section>
 
-            <span class="tag ok">Related Guides</span>
-            <ul class="link-list">
-                <li><a href="https://securityinabox.org/en/assess-plan/physical-security/" target="_blank" rel="noopener">Physical Security</a></li>
-                <li><a href="https://securityinabox.org/en/assess-plan/multiple-identities/" target="_blank" rel="noopener">Multiple Identities</a></li>
-                <li><a href="https://securityinabox.org/en/assess-plan/private-communication/" target="_blank" rel="noopener">Private Communication</a></li>
-                <li><a href="https://securityinabox.org/en/assess-plan/safer-travel/" target="_blank" rel="noopener">Safer Travel</a></li>
-                <li><a href="https://securityinabox.org/en/assess-plan/tools/" target="_blank" rel="noopener">Assess and Plan Tools</a></li>
-            </ul>
-
-            <span class="tag warn">Protect against physical threats</span>
-            <div class="tool-card">
-                <img src="https://securityinabox.org/assets/images/tools/haven.svg" alt="Haven app logo">
-                <div>
-                    <h3>Haven (Android)</h3>
-                    <p>A free and open-source app that turns an Android device into a surveillance and motion-alert camera.</p>
-                    <p><a href="https://github.com/guardianproject/haven" target="_blank" rel="noopener">Download APK file from Github repository</a> | <a href="https://guardianproject.info/apps/org.havenapp.main/" target="_blank" rel="noopener">See documentation</a></p>
-                </div>
-            </div>
+        <section class="card slide" id="tip">
+            <h3>Important Tip</h3>
+            <p>Most attacks happen because of weak passwords, carelessness, and lack of awareness.</p>
+            <div class="presenter-note">Best protection: be careful + stay informed + use basic security tools.</div>
         </section>
     </main>
 
