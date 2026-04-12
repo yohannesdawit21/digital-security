@@ -9,13 +9,13 @@ Open `index.html` to enter the handbook. It is the main landing page and links t
 ## Pages
 
 - `index.html` - Home dashboard and section launcher
+- `home.html` - Main handbook home page
 - `assess-plan.html` - Assess risks, plan protections, and review physical security, identities, communication privacy, and safer travel
 - `passwords.html` - Password attacks, password managers, and two-factor authentication
 - `communication.html` - Social media safety, secure email, safer messaging, and account recovery
 - `phones-computers.html` - Malware protection and device hardening for Android, iOS, Windows, and Mac
 - `internet-connection.html` - Browser security, censorship, VPNs, Tor, and anonymity tools
 - `files.html` - File protection, backups, secure deletion, and metadata removal
-- `digital security.html` - Legacy AI lab page kept in the workspace, but not used as the main home page
 
 ## Features
 
@@ -29,13 +29,13 @@ Open `index.html` to enter the handbook. It is the main landing page and links t
 ```text
 security box/
 ├── index.html
+├── home.html
 ├── assess-plan.html
 ├── passwords.html
 ├── communication.html
 ├── phones-computers.html
 ├── internet-connection.html
 ├── files.html
-├── digital security.html
 ├── assets/
 │   └── style.css
 └── README.md
