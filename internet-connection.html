@@ -98,6 +98,34 @@
             box-shadow: 0 10px 20px rgba(16, 93, 121, 0.22);
         }
 
+        .bottom-video-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 14px 0 0;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: #ff0033;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(255, 0, 51, 0.22);
+        }
+
+        .bottom-video-link .icon {
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            background: #fff;
+            color: #ff0033;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 900;
+            line-height: 1;
+        }
+
         .visual-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -147,7 +175,6 @@
 <body class="chapter-page">
     <header>
         <h1>Your Internet Connection</h1>
-        <p>Presentation-ready guide for censorship, secure browsing, VPNs, and anonymity.</p>
         <details class="mobile-menu">
             <summary>☰ Menu</summary>
             <div class="mobile-menu-panel">
@@ -180,7 +207,6 @@
                     <p class="meta">Simple guide</p>
                     <h3>Your Internet Connection</h3>
                     <p>Your internet connection is how you browse websites, use apps, and send messages. If not secure, attackers or authorities can see, track, or block your activity.</p>
-                    <a class="video-link" href="https://www.youtube.com/results?search_query=internet+security+basics+for+beginners" target="_blank" rel="noopener">Watch short YouTube intro</a>
                 </div>
                 <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Laptop connected to internet dashboard concept">
             </div>
@@ -195,7 +221,6 @@
                 <li>Server sends data back (website, video, app data)</li>
             </ul>
             <div class="presenter-note">Like this: You ask, internet delivers.</div>
-            <p><strong>What is censorship?</strong> Blocking or controlling what you can access online.</p>
             <p><strong>Examples:</strong></p>
             <ul class="link-list">
                 <li>Government blocks certain websites</li>
@@ -207,7 +232,6 @@
                 <div class="info-chip">Monitoring of your activity</div>
                 <div class="info-chip">Loss of privacy</div>
             </div>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=internet+censorship+explained+simply" target="_blank" rel="noopener">Short YouTube link for this concept</a>
         </section>
 
         <section class="card slide" id="browse">
@@ -228,26 +252,6 @@
                 <li>Use secure browsers</li>
             </ul>
             <div class="presenter-note">Always ask: Is this website real?</div>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=safe+browsing+tips+for+beginners" target="_blank" rel="noopener">Short YouTube link for this concept</a>
-        </section>
-
-        <section class="card slide" id="circumvent">
-            <h3>Circumvent Internet Blockages and Monitoring</h3>
-            <p><strong>What it means:</strong> Access blocked content and reduce tracking.</p>
-            <p><strong>Situations:</strong></p>
-            <ul class="link-list">
-                <li>Website blocked in your country</li>
-                <li>Network restricts access</li>
-                <li>Your activity is monitored</li>
-            </ul>
-            <p><strong>How to bypass safely:</strong></p>
-            <ul class="link-list">
-                <li>Use VPN (Virtual Private Network)</li>
-                <li>Use proxy servers</li>
-                <li>Use privacy-focused browsers</li>
-            </ul>
-            <div class="presenter-note">VPN hides your real location and encrypts your data.</div>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=vpn+and+internet+blocking+explained" target="_blank" rel="noopener">Short YouTube link for this concept</a>
         </section>
 
         <section class="card slide" id="anonymize">
@@ -267,7 +271,6 @@
                 <li>Use different accounts and identities</li>
             </ul>
             <div class="presenter-note">Without protection, websites can see your IP, location, and activity. With anonymity tools, your identity is better hidden.</div>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=how+to+browse+anonymously+with+tor+for+beginners" target="_blank" rel="noopener">Short YouTube link for this concept</a>
         </section>
 
         <section class="card slide" id="visuals">
@@ -306,13 +309,16 @@
                 <li><strong>Tor Browser:</strong> helps you browse anonymously</li>
                 <li><strong>DNS Security Tools:</strong> help block malicious websites</li>
             </ul>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=best+internet+privacy+tools+for+beginners" target="_blank" rel="noopener">Short YouTube link for this concept</a>
         </section>
 
         <section class="card slide" id="tip">
             <h3>Final Important Tip</h3>
             <p>Internet risks include tracking, censorship, and fake websites.</p>
             <div class="presenter-note">Stay safe by browsing carefully, using protection tools, and protecting your identity.</div>
+            <a class="bottom-video-link" href="https://www.youtube.com/watch?v=aO858HyFbKI" target="_blank" rel="noopener">
+                <span class="icon" aria-hidden="true">▶</span>
+                Watch on YouTube
+            </a>
         </section>
     </main>
 
