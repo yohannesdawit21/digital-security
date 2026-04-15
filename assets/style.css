@@ -69,6 +69,17 @@ header h1 {
     font-size: clamp(1.4rem, 2.6vw, 2rem);
     letter-spacing: -0.03em;
     color: #000;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header h1::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    background: url("security-logo.svg") center/contain no-repeat;
 }
 
 header p {
@@ -234,6 +245,10 @@ main {
     border-radius: 10px;
     border: 0;
     background: #fff;
+}
+
+.corner-logo {
+    display: none !important;
 }
 
 .tag {
@@ -523,5 +538,29 @@ footer {
     .card:hover {
         transform: translateY(-2px);
         box-shadow: 0 26px 42px rgba(43, 52, 55, 0.08);
+    }
+}
+
+@media (max-width: 820px) {
+    .visual-grid {
+        display: grid !important;
+        grid-auto-flow: column !important;
+        grid-auto-columns: minmax(82%, 1fr) !important;
+        grid-template-columns: none !important;
+        overflow-x: auto !important;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        gap: 10px !important;
+        padding-bottom: 6px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .visual-grid::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .visual-card {
+        min-width: 0;
+        scroll-snap-align: start;
     }
 }
