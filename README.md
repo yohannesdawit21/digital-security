@@ -16,6 +16,7 @@ Open `index.html` to enter the handbook. It is the main landing page and links t
 - `phones-computers.html` - Malware protection and device hardening for Android, iOS, Windows, and Mac
 - `internet-connection.html` - Browser security, censorship, VPNs, Tor, and anonymity tools
 - `files.html` - File protection, backups, secure deletion, and metadata removal
+- `tools.html` - Practical security tools to check malicious links, files, and QR codes
 
 ## Features
 
@@ -36,6 +37,7 @@ security box/
 ├── phones-computers.html
 ├── internet-connection.html
 ├── files.html
+├── tools.html
 ├── assets/
 │   └── style.css
 └── README.md

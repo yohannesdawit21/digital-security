@@ -362,6 +362,51 @@ footer {
     font-size: 0.86rem;
 }
 
+body {
+    padding-bottom: 92px;
+}
+
+.page-pager {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 14px;
+    z-index: 60;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.page-pager-inner {
+    width: min(980px, calc(100% - 20px));
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.84);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 14px 26px rgba(43, 52, 55, 0.12);
+    pointer-events: auto;
+}
+
+.page-pager a {
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 9px 14px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #fff;
+    background: linear-gradient(135deg, #0f5d79, #2a7d9d);
+    box-shadow: 0 8px 16px rgba(15, 93, 121, 0.22);
+}
+
+.page-pager a:hover {
+    filter: brightness(1.06);
+}
+
 /* Sovereign Cipher chapter layout: intentional asymmetry with a metadata rail. */
 .chapter-page .slide {
     display: grid;
@@ -524,6 +569,26 @@ footer {
 
     .card {
         padding: 24px;
+    }
+
+    body {
+        padding-bottom: 102px;
+    }
+
+    .page-pager {
+        bottom: 10px;
+    }
+
+    .page-pager-inner {
+        width: calc(100% - 14px);
+        padding: 6px;
+    }
+
+    .page-pager a {
+        flex: 1 1 0;
+        text-align: center;
+        font-size: 0.78rem;
+        padding: 9px 10px;
     }
 }
 
