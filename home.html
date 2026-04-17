@@ -167,6 +167,92 @@
             box-shadow: 0 20px 40px rgba(43, 52, 55, 0.07);
         }
 
+        .prereq-box {
+            margin-top: 22px;
+            padding: 24px;
+            border-radius: 16px;
+            background: #ffffff;
+            box-shadow: 0 20px 40px rgba(43, 52, 55, 0.07);
+        }
+
+        .prereq-box h3 {
+            margin: 0;
+            font-size: clamp(1.3rem, 3.2vw, 1.8rem);
+            line-height: 1.2;
+            color: #111;
+            letter-spacing: -0.02em;
+        }
+
+        .prereq-intro {
+            margin: 10px 0 0;
+            color: #39535e;
+        }
+
+        .prereq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .prereq-card {
+            background: #f4fafb;
+            border: 1px solid #d8e6eb;
+            border-radius: 12px;
+            padding: 12px;
+        }
+
+        .prereq-card h4 {
+            margin: 0 0 8px;
+            color: #1a4e61;
+        }
+
+        .prereq-card p {
+            margin: 0 0 8px;
+            color: #2f4a56;
+        }
+
+        .prereq-flow,
+        .prereq-compare,
+        .prereq-crime {
+            margin-top: 14px;
+            border-radius: 12px;
+            border: 1px solid #d8e6eb;
+            background: #f8fcfd;
+            padding: 14px;
+        }
+
+        .prereq-flow h4,
+        .prereq-compare h4,
+        .prereq-crime h4 {
+            margin: 0 0 8px;
+            color: #1a4e61;
+        }
+
+        .prereq-flow p,
+        .prereq-compare p,
+        .prereq-crime p {
+            margin: 0 0 8px;
+            color: #2f4a56;
+        }
+
+        .prereq-flow ul,
+        .prereq-compare ul,
+        .prereq-crime ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #2f4a56;
+        }
+
+        .prereq-summary {
+            margin-top: 12px;
+            font-weight: 700;
+            color: #11485d;
+            background: #eaf4f8;
+            border-radius: 10px;
+            padding: 10px 12px;
+        }
+
         .protect-title {
             margin: 0 0 10px;
             font-size: clamp(1.3rem, 3.2vw, 1.8rem);
@@ -288,10 +374,15 @@
         }
 
         .home-hero,
+        .prereq-box,
         .protect-box,
         .chapter-grid,
         .photo-strip {
             animation: riseIn 0.7s ease both;
+        }
+
+        .prereq-box {
+            animation-delay: 0.06s;
         }
 
         .protect-box {
@@ -316,6 +407,7 @@
 
         @media (prefers-reduced-motion: reduce) {
             .home-hero,
+            .prereq-box,
             .protect-box,
             .chapter-grid,
             .photo-strip,
@@ -409,6 +501,65 @@
                 </figure>
                 <div class="info-chip">Quick Win: Use unique passwords + 2FA</div>
             </div>
+        </section>
+
+        <section class="prereq-box" aria-labelledby="prereq-title">
+            <h3 id="prereq-title">Pre Requests to Understand Digital Security</h3>
+            <p class="prereq-intro">Start with these fundamentals before diving into the full handbook.</p>
+
+            <div class="prereq-grid">
+                <article class="prereq-card">
+                    <h4>💻 Computer</h4>
+                    <p>A computer is an electronic device that takes input (data), processes it, and produces output (information).</p>
+                    <p>Example: Typing on a keyboard -> computer processes -> shows results on screen.</p>
+                </article>
+
+                <article class="prereq-card">
+                    <h4>🌐 Internet</h4>
+                    <p>The internet is a global network that connects computers and devices, allowing them to share information and communicate.</p>
+                    <p>Example: Browsing websites, sending emails, using apps like Telegram or WhatsApp.</p>
+                </article>
+
+                <article class="prereq-card">
+                    <h4>🔐 Security (Cybersecurity)</h4>
+                    <p>Security means protecting computers, networks, and data from unauthorized access, attacks, or damage.</p>
+                    <p>Example habits: using strong passwords, avoiding phishing links, and installing antivirus software.</p>
+                </article>
+            </div>
+
+            <p class="prereq-summary">Simple summary: Computer works with data, Internet connects computers, and Security protects everything.</p>
+
+            <article class="prereq-flow" aria-labelledby="internet-works-title">
+                <h4 id="internet-works-title">🌐 How the Internet Works</h4>
+                <p>The internet works by sending data between devices in small pieces called packets.</p>
+                <p>Simple flow: You request a website -> data travels across networks -> server responds -> you see the page.</p>
+            </article>
+
+            <article class="prereq-compare" aria-labelledby="http-https-title">
+                <h4 id="http-https-title">🔐 HTTP vs HTTPS</h4>
+                <p><strong>HTTP</strong> and <strong>HTTPS</strong> are web protocols used to open websites.</p>
+                <ul>
+                    <li><strong>HTTP:</strong> loads websites but data is not encrypted.</li>
+                    <li><strong>HTTPS:</strong> secure version of HTTP with encrypted data.</li>
+                    <li><strong>HTTP risk:</strong> attackers can read or change data in transit.</li>
+                    <li><strong>HTTPS benefit:</strong> protects passwords, payments, and personal data.</li>
+                    <li>http://example.com is not secure, while https://example.com is secure.</li>
+                </ul>
+                <p><strong>Simple summary:</strong> HTTP is not secure, HTTPS is encrypted and safer.</p>
+            </article>
+
+            <article class="prereq-crime" aria-labelledby="crime-title">
+                <h4 id="crime-title">⚠️ Computer Crime (Cybercrime)</h4>
+                <p>Computer crime is any illegal activity that uses a computer, network, or the internet.</p>
+                <p>Simple meaning: using technology to steal, harm, or cheat.</p>
+                <ul>
+                    <li>Hacking: breaking into systems without permission.</li>
+                    <li>Phishing: fake messages to steal passwords or money.</li>
+                    <li>Malware: harmful software that damages or controls devices.</li>
+                    <li>Identity theft: stealing someone's personal information.</li>
+                    <li>Ransomware: malware that locks files and demands payment.</li>
+                </ul>
+            </article>
         </section>
 
         <section class="protect-box" aria-labelledby="protect-title">
